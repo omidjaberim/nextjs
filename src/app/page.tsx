@@ -1,6 +1,6 @@
 "use client"
 
-import { Grid } from "@mui/material";
+import { ClickAwayListener, Grid } from "@mui/material";
 import Header from "./Header";
 import MarketListingTime from "./MarketListingTime";
 import Testimonies from "./Testimonies";
@@ -58,26 +58,29 @@ export default function App() {
   const scrollToId = (id:string)=>{
       document.getElementById(id)?.scrollIntoView({
         behavior : 'smooth',
-        block : 'start',
-        inline : "start"
-      });
-      
+        block :  "center",
+        inline : "center"
+      });      
   }
   const ids = ["meta", "about", "Technology","tokenomics","roadmap","FAQ"];
-  const activeId = useScrollspy(ids, 54); 
+  const activeId = useScrollspy(ids, 39); 
 
   const [socialSnack,setSocialSnack] = useState<boolean>(false);
   const handleSocialBtnClick = ()=>{
     setSocialSnack(!socialSnack)
   }  
-
+  const closeSocial = ()=>{
+    setSocialSnack(false)
+  }  
 
   return (          
     <Grid  className="w-full flex flex-col justify-center items-center bg-black relative">
       <Header  scrollToId={scrollToId} selectedItem={activeId} />
-      <Chip 
+        <ClickAwayListener onClickAway={closeSocial}>
+        <Chip 
           className="fixed rounded-full  hover:scale-105 transition-all z-50 top-[100px]  text-[16px] leading-8 right-1  text-white" 
           onClick={handleSocialBtnClick} label={socialSnack ? <SocialSection /> : <SocialButton />} />  
+        </ClickAwayListener>
       <div className="lg:max-w-[1440px] w-full flex-col items-center justify-center relative ">         
         <div id="meta" >
           <MarketListingTime />          

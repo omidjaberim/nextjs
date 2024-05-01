@@ -10,10 +10,10 @@ import { Grid } from '@mui/material';
 const Gradient = styled(Box)(({  }) => ({
   zIndex:0,
   position: "absolute",
-  top: "50%",
-  left: "50%",
-  width: "75%",
-  height: "50%",
+  top: "110%",
+  left: "100%",
+  width: "100%",
+  height: "180%",
   transform: "translate(-50%, -50%)",
   flexShrink: "0",
   borderRadius: "50%",
@@ -30,12 +30,12 @@ const Gradient = styled(Box)(({  }) => ({
     height:"60%",
   },
 
-  [`@media (max-width: 980px)`]: {
+  [`@media (max-width: 820px)`]: {
     top:"50%",
     width:"50%",
     height:"80%",
   },
-  [`@media (max-width: 340px)`]: {
+  [`@media (max-width: 344px)`]: {
   top:"8%",
   left:"0%",  
   width:"200px",
@@ -74,7 +74,7 @@ const CardStyle = styled(Box)(({})=>({
 const Card = ({title,subtitle,points,mt}:{title:string;subtitle:string;points:any[];mt:string})=>{
     return (
       <CardStyle 
-          className={`z-10  w-full md:w-[224px] bg-[url('/roadmapNoise.png')] bg-cover bg-[#000000b4] hover:scale-105 transition-all font-Oxanium md:h-[380px] `}
+          className={`z-10  w-full md:w-[224px] bg-[url('/roadmapNoise.png')] bg-cover bg-[#000000b4] hover:scale-105 transition-all font-Oxanium md:h-[405px] `}
           sx={{marginTop:{xs:0,xl:mt}}} 
         >
         <Grid className="flex gap-[8px] items-stretch">
@@ -119,8 +119,8 @@ const roadMapData = [{
 const Roadmap = ()=>{
     return (
           <Grid id='roadmap'  className='w-full flex flex-col px-4 py-[60px] items-center'  >
-            <Grid  className="w-full h-full backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat" >
-              <div className='mt-[6px] lg:mt-0 w-full h-full flex flex-col' >
+            <Grid  className="w-full  backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat" >
+              <div className='mt-[6px] lg:mt-0 w-full  flex flex-col' >
                   <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}  >RoadMap</Title>
                   <Grid className='w-full flex flex-wrap justify-center gap-5 mt-[29px]' >
                   {

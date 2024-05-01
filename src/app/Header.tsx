@@ -1,13 +1,9 @@
-/* eslint-disable react/jsx-no-duplicate-props */
 import { Grid } from "@mui/material";
 import Image from "next/image";
 import Logo from "@/assets/logo.png";
 import HamMenu from "@/assets/menu.svg";
 import React, {
-  forwardRef,
   useContext,
-  useLayoutEffect,
-  useRef,
   useState,
 } from "react";
 import SideMenu from "./components/SideMenu";
@@ -32,7 +28,7 @@ const Header = (props: IProp) => {
   return (
     <Grid
       className="bg-[url('/footerNoise.png')] bg-auto  w-full flex justify-center items-center  font-Oxanium text-[12px] 
-              lg:text-[14px] text-[#fafafa] leading-8 font-semibold py-[12px] bg-[#131315f1] shadow-black/5 fixed top-0 z-50"
+              lg:text-[14px] text-[#fafafa] leading-8 font-semibold py-[12px] bg-[#131315f6] shadow-black/5 sticky top-0 z-50"
     >
       <Grid className="flex justify-between w-[calc(100vw)] xl:w-[1440px]">
         <Grid className="w-1/2 md:w-3/4 flex justify-start gap-[2px] md:gap-[7px] xl:gap-[40px]">
