@@ -94,6 +94,11 @@ const Header = (props: IProp) => {
             >
               FAQ
             </span>
+            <span
+              className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all`}
+            >
+              Audit
+            </span>
           </Grid>
           <Grid className="sm:flex lg:hidden">
             <SideMenu

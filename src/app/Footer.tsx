@@ -45,7 +45,6 @@ const socialShare = [
   },
  
 ];
-
 const SocialSection = () => {
 
   return (

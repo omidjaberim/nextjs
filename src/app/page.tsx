@@ -11,10 +11,9 @@ import Roadmap from "./Roadmap";
 import FaqSection from "./FaqSection";
 import Footer from "./Footer";
 import {   useLayoutEffect, useState } from "react";
-
-const capitalize = (text: string) =>
-  text.charAt(0).toUpperCase() + text.substr(1);
-
+import Chip from '@mui/material/Chip';
+import SocaialSnackBar from "./components/SocaialSnackBar";
+import  SocialSection,{SocialButton}  from "./components/SocialSection";
 const clamp = (value: number) => Math.max(0, value);
 
 const isBetween = (value: number, floor: number, ceil: number) =>
@@ -67,9 +66,19 @@ export default function App() {
   const ids = ["meta", "about", "Technology","tokenomics","roadmap","FAQ"];
   const activeId = useScrollspy(ids, 54); 
 
+  const [socialSnack,setSocialSnack] = useState<boolean>(false);
+  const handleSocialBtnClick = ()=>{
+    setSocialSnack(!socialSnack)
+  }  
+
+
   return (          
-    <Grid  className="w-full flex justify-center bg-black"  >
-      <div className="lg:max-w-[1440px] w-full flex-col items-center justify-center relative "  >         
+    <Grid  className="w-full flex justify-center bg-black">
+      <div className="lg:max-w-[1440px] w-full flex-col items-center justify-center relative ">  
+      <Chip 
+        className="fixed rounded-full  hover:scale-105 transition-all z-50 top-[100px]  text-[16px] leading-8 right-1  text-white" 
+        onClick={handleSocialBtnClick} label={socialSnack ? <SocialSection /> : <SocialButton />} />
+             
         <Header  scrollToId={scrollToId} selectedItem={activeId} />
         <div id="meta" >
           <MarketListingTime />          

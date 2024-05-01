@@ -81,7 +81,7 @@ const Card = ({title,subtitle,points,mt}:{title:string;subtitle:string;points:an
           sx={{marginTop:{xs:0,xl:mt}}} 
         >
         <Grid className="flex gap-[8px] items-stretch">
-            <Image alt='' src={arrowImage} width={24} height={24} />
+            <Image alt='' src={arrowImage} width={24} height={24} className="w-[24px] h-[24px]" />
             <Typography component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"32px"}>{title}</Typography>
         </Grid>
         <Typography component={'div'}  color={"#FFF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"32px"}>{subtitle}</Typography>
