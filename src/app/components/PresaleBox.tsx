@@ -1,4 +1,5 @@
 import {
+  Backdrop,
   Box,
   Divider,
   Grid,
@@ -93,7 +94,7 @@ function PresaleBox() {
       let presaleData: any = await preSaleReadFunction("phases", [
         +stage?.toString(),
       ]);
-      // setEndTime(+presaleData[1]?.toString());
+      setEndTime(+presaleData[1]?.toString());
       settokenPrice(+formatUnits(presaleData[2]?.toString(), dec));
       let totalRaisedAmount: any = 0;
       let totalTokeSoldContract: any = 0;
@@ -221,11 +222,11 @@ function PresaleBox() {
     const newValue = input?.replace(/[^0-9.]/g, "");
     setAmount(newValue);
   };
-
   return (
     <Grid
       width={{ xs: "100%", md: "max-content" }}
       className="max-w-[640px] font-Oxanium z-20"
+      id="presale"
     >
       <ToastNotify alertState={alertState} setAlertState={setAlertState} />
       <Stack
@@ -255,8 +256,15 @@ function PresaleBox() {
         sx={{
           gap: 2,
         }}
-        className="px-[24px] py-[20px] rounded-[26px] border-[#36303C] border-t-[3px] border-x-2 bg-[#231b2a] bg-[url('/Noise.png')] bg-cover"
+        className="px-[24px] py-[20px] rounded-[26px] border-[#36303C] border-t-[3px] border-x-2 bg-[#231b2a] bg-[url('/Noise.png')] bg-cover "
       >
+        <Backdrop
+          sx={{ color: '#fff', zIndex: 52 }}
+          open={true}
+          className="w-full lg:w-[50%] lg:top-[500px] top-[700px] mx-auto h-full"
+        >
+          <span className="text-[52px] font-bold" >Comming soon</span>
+        </Backdrop>
         <Stack
           flexDirection={{ xs: "column", md: "row" }}
           justifyContent={"space-between"}
@@ -422,7 +430,7 @@ function PresaleBox() {
                   color: "#e4acb2",
                 }}
               >
-                $0.01
+                $0.03
               </span>
             </Typography>
           </Grid>

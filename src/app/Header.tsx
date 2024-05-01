@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Link } from "@mui/material";
 import Image from "next/image";
 import Logo from "@/assets/logo.png";
 import HamMenu from "@/assets/menu.svg";
@@ -40,15 +40,15 @@ const Header = (props: IProp) => {
             className="sm:flex lg:hidden cursor-pointer mx-2 md:mx-0"
             onClick={() => toggleDrawer(!open)}
           />
-          <Image src={Logo} alt="meta" width={42} height={42} className="ml-1" />
+          <Image src={Logo} alt="meta" width={42} height={42} className="ml-1 cursor-pointer" onClick={()=>scrollTo(0,0)} />
           <Grid className="text-white sm:hidden lg:flex items-center gap-[2px] md:gap-[22px] xl:gap-[32px]">
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${
                 selectedItem === "meta" ? " scale-105 text-[#B887FF]" : ""
               }`}
-              onClick={() => scrollToId("meta")}
+              onClick={() => scrollToId("presale")}
             >
-              META-V
+              Presale
             </span>
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${
@@ -89,11 +89,6 @@ const Header = (props: IProp) => {
               onClick={() => scrollToId("FAQ")}
             >
               FAQ
-            </span>
-            <span
-              className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all`}
-            >
-              Audit
             </span>
           </Grid>
           <Grid className="sm:flex lg:hidden">

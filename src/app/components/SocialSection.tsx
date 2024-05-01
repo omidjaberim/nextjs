@@ -11,11 +11,11 @@ export const SocialButton = ()=>{
 const SocialSection = ()=>{
     const socialShare = [
         {
-        link: "https://t.me/META_V_Official",
+        link: "https://twitter.com/META_V_Official",
         image: <TwitterIcon className="hover:scale-110 text-white" />,
       },
         {
-        link: "https://twitter.com/META_V_Official",
+        link: "https://t.me/META_V_Official",
         image: <TelegramIcon className="hover:scale-110 text-white " />,
       },
      

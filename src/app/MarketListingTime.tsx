@@ -2,12 +2,12 @@ import React from "react";
 import {
   Button,
   Grid,
+  Link,
   Typography,
 } from "@mui/material";
 import PresaleBox from "@/app/components/PresaleBox";
 import Image from "next/image"
-import AuditImg from "@/assets/audit.png"
-
+import {StyledButton} from "./components/SmallComponents/AppComponents"
 
 const PresaleSection = ()=>{
     const typoStyle = {
@@ -34,7 +34,7 @@ const PresaleSection = ()=>{
         <Grid className="w-full flex sm:h-[1140px] lg:h-[1140px] backdrop-brightness-150 bg-gradient-to-b from-[rgba(81,63,100,0.7)]  via-[rgb(49,27,68,0.7)] to-black "   >
           <Grid className="w-full relative px-[16px]  md:px-0 bg-[url('/Background/Background/bgcity1.png')] bg-no-repeat bg-top"  >            
             <div 
-              id="presale" 
+               
               className="w-full font-Roboto flex justify-center items-center flex-col relative px-1"
               >
                 <div className="w-full  inset-0 z-0" >
@@ -48,10 +48,11 @@ const PresaleSection = ()=>{
                   <Image alt="bg" src={"/star3.svg"} width={18} height={18} className="absolute z-50 top-[92%] right-[38%] " style={{animation: 'pulse 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}} />
                 </div>
                 <div  className="z-20 pb-1 mt-[110px] flex flex-col items-center">
-                    <Typography  sx={typoStyle} className="flex-col md:flex-row leading-relaxed font-Oxanium" display={"flex"} flexWrap={"wrap"}  gap={{ xs:"2px", md:"2px", xl:"8px" }} width={"100%"} justifyContent={"center"}>
-                    <Grid component="span" className="text-[48px]" whiteSpace={"nowrap"} ml={{lg:"8px" ,xs:"8px"}}  >META-V,</Grid>  
-                    <Grid component="span" className="text-[48px]"  ml={{lg:"8px" ,xs:"8px"}} >Epitomizes a</Grid>  
-                    <Grid component="span" className="text-[48px]"  ml={{lg:"8px" ,xs:"8px"}} sx={{
+                    <Typography  sx={typoStyle} className="flex-col md:flex-row leading-relaxed font-Oxanium" display={"flex"} flexWrap={"wrap"}  
+                      gap={{ xs:"1px", md:"2px", xl:"8px" }} width={"100%"} justifyContent={"center"}>
+                    <Grid component="span" className="text-[48px] leading-[64px]" whiteSpace={"nowrap"} ml={{lg:"8px" ,xs:"8px"}}  >META-V,</Grid>  
+                    <Grid component="span" className="text-[48px] leading-[64px]"  ml={{lg:"8px" ,xs:"8px"}} >Epitomizes a</Grid>  
+                    <Grid component="span" className="text-[48px] leading-[64px]"  ml={{lg:"8px" ,xs:"8px"}} sx={{
                             color: "rgba(256,256,256,0.16)",
                         WebkitTextFillColor: "rgba(256,256,256,0.16)",
                         WebkitTextStroke: "1px white",
@@ -60,9 +61,15 @@ const PresaleSection = ()=>{
                     <Typography  sx={subTypeStyle} className="font-Oxanium"  >
                         The convergence of reality and innovation, where aspirations are converted into digital realms.
                     </Typography>
-                    <Button className=" flex justify-center items-center p-[5px] mt-[24px] mb-[40px] text-white leading-5 font-bold text-[24px]" >
-                        <Image src={AuditImg} alt="" width={82} height={34} className="cursor-pointer" />
-                    </Button>
+                      <div className="my-[40px]" >
+                      <StyledButton  >
+                      <Link 
+                            className="text-[#131315] leading-5 font-bold text-[20px] px-[15px] py-[10px] font-Oxanium"  
+                            href="https://coinsult.net/projects/meta-v/" target="_blank" style={{textDecoration:'none'}}  >
+                        Audit
+                      </Link>
+                      </StyledButton>
+                      </div>
                 </div>
                 <PresaleBox />
             </div>
