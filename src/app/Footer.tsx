@@ -81,14 +81,15 @@ const SocialSection = () => {
               fontStyle: "normal",
               fontWeight: "400",
               lineHeight: "24px",
-              
+              textAlign:"center"
             }}
           >
             META-V LLC, Dubai @ 2024. All rights reserved.
 
           </Typography>
-          <Grid className="flex flex-1 gap-4 justify-end">
-            <span className="text-white text-[13px] leading-7" >contact : contact@meta-v.io</span>
+          <Grid className="flex flex-1 gap-4 justify-end flex-col md:flex-row">
+            <span className="text-[#9A9DAB] text-[13px] leading-7" >contact@meta-v.io</span>
+            <div className="flex justify-around">
             {socialShare.map((platform, index) => (
               <Grid width={"24px"} height={"24px"} key={index}  >
               <Link href={platform.link} target="_blank">
@@ -98,6 +99,7 @@ const SocialSection = () => {
               </Link>
               </Grid>
             ))}
+            </div>
           </Grid>
         </Grid>
       </Grid>
@@ -107,92 +109,92 @@ const SocialSection = () => {
 const Footer = (props:any) => {
   const {scrollToId} = props;
   return (
-      <Container className="w-full bg-gradient-to-r from-black  to-[#24243c] " margin={"auto"}>
-        <div className="bg-[url('/footerNoise.png')] bg-repeat bg-auto w-full h-full py-[32px] px-[80px]" >
-        <Grid
-          display={"flex"}
-          width={"100%"}
-          gap={"32px"}
-          sx={{
-            flexWrap: "wrap",
-            "@media (max-width: 300px)": {
-              whiteSpace: "nowrap",
-              gap: "8px",
-              alignItems: "flex-start",
-              flexDirection: "column", 
-            },
-            "@media (max-width: 600px)": {
-              whiteSpace: "nowrap",
-              gap: "16px",
-              alignItems: "flex-start",
-              flexDirection: "column", // Maintain vertical layout on smaller screens
-            },
-          }}
-        >
-          <Grid
-            flex={1}
-            display={"flex"}
-            justifyContent={"flex-start"}
-            flexDirection={"row"}
-            gap={"8px"}
-            alignItems={"center"}
-            whiteSpace={"nowrap"}
-            marginBottom={"32px"}
-          >
-            <Image
-              alt=""
-              style={{ width: "24px", height: "22.4px" }}
-              src={logoImage}
-            />
-            <Typography
-              sx={{
-                color: "#FFF",
-                leadingTrim: "both",
-                textEdge: "cap",
-                fontSize: "20px",
-                fontStyle: "normal",
-                fontWeight: "600",
-                lineHeight: "32px",
-              }}
-            >
-              META-V
-            </Typography>
-          </Grid>
+      <Container className="bg-[url('/footerNoise.png')] bg-repeat bg-auto flex flex-col justify-center items-center w-full bg-[#1b1b30] " margin={"auto"}>
+        <div className=" h-full py-[32px] px-[80px] w-[calc(100vw)] xl:w-[1440px]" >
           <Grid
             display={"flex"}
+            width={"100%"}
             gap={"32px"}
-            className="hidden md:flex"
+            sx={{
+              flexWrap: "wrap",
+              "@media (max-width: 300px)": {
+                whiteSpace: "nowrap",
+                gap: "8px",
+                alignItems: "flex-start",
+                flexDirection: "column", 
+              },
+              "@media (max-width: 600px)": {
+                whiteSpace: "nowrap",
+                gap: "16px",
+                alignItems: "flex-start",
+                flexDirection: "column", // Maintain vertical layout on smaller screens
+              },
+            }}
           >
-            {sampleMenu.map((menu, index) => (              
+            <Grid
+              flex={1}
+              display={"flex"}
+              justifyContent={"flex-start"}
+              flexDirection={"row"}
+              gap={"8px"}
+              alignItems={"center"}
+              whiteSpace={"nowrap"}
+              marginBottom={"32px"}
+            >
+              <Image
+                alt=""
+                style={{ width: "24px", height: "22.4px" }}
+                src={logoImage}
+              />
               <Typography
-                key={index}
-                sx={{   
-                  marginBottom:"26px",               
-                  whiteSpace: "nowrap",
-                  padding: "12px 8px",
+                sx={{
                   color: "#FFF",
-                  fontSize: "14px",
+                  leadingTrim: "both",
+                  textEdge: "cap",
+                  fontSize: "20px",
                   fontStyle: "normal",
                   fontWeight: "600",
-                  lineHeight: "24px",
-                  "&:hover":{
-                  color:"#979BFF"
-                  },
-                  "@media (max-width: 900px)": {
-                    marginRight: "2px",
-                    lineHeight: "24px",
-                    padding: "2px 8px",
-                  },
+                  lineHeight: "32px",
                 }}
-                className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all `}
-                onClick={()=>scrollToId(menu.link.slice(1))}
               >
-                {menu.title}
+                META-V
               </Typography>
-            ))}
+            </Grid>
+            <Grid
+              display={"flex"}
+              gap={"32px"}
+              className="hidden md:flex"
+            >
+              {sampleMenu.map((menu, index) => (              
+                <Typography
+                  key={index}
+                  sx={{   
+                    marginBottom:"26px",               
+                    whiteSpace: "nowrap",
+                    padding: "12px 8px",
+                    color: "#FFF",
+                    fontSize: "14px",
+                    fontStyle: "normal",
+                    fontWeight: "600",
+                    lineHeight: "24px",
+                    "&:hover":{
+                    color:"#979BFF"
+                    },
+                    "@media (max-width: 900px)": {
+                      marginRight: "2px",
+                      lineHeight: "24px",
+                      padding: "2px 8px",
+                    },
+                  }}
+                  className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all `}
+                  onClick={()=>scrollToId(menu.link.slice(1))}
+                >
+                  {menu.title}
+                </Typography>
+              ))}
+            </Grid>
           </Grid>
-        </Grid>
-        <SocialSection />
+          <SocialSection />
         </div>
       </Container>
   );

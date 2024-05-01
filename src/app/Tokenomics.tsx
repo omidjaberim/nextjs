@@ -53,20 +53,15 @@ const TokenShareWrapper = styled(Box)(({theme})=>({
 
 }));
 
-const Title = styled(Box)(({theme})=>({
-    textAlign: 'center',
-    fontSize: '36px',
-    fontStyle: 'normal',
-    fontWeight: '400',
-    lineHeight: '44px', 
+const Title =  styled(Typography)(({})=>({  
+    textAlign: "center",
+    lineHeight: "44px", 
     background: 'linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)',
     WebkitBackgroundClip:'text',
     WebkitTextFillColor:'transparent',
     backgroundClip:'text',
-    [`@media (max-width: ${theme.breakpoints.values.sm}px)`]:{    
-        fontSize: "28px",
-    }
-}))
+    })
+)
 
 const tokenShareData = [
     {
@@ -112,21 +107,22 @@ const tokenShareData = [
 const Tokenomics = ()=>{
     return(
         <Container id="tokenomics"   className="bg-black  flex flex-col " >
-           <Title className='mt-[75px] text-[28px] font-Oxanium font-bold' >Tokenomics</Title>
+           <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"} >Tokenomics</Title>
             <TokenShares>
                 {tokenShareData.map((share,index)=>{
                     return (
                     <TokenShareWrapper key={index} className="hover:animate-pulse hover:scale-105 transition-all bg-[url('/tokenNoise.png')] bg-auto" > 
-                        <Grid borderRadius={'12px'} display={"flex"} flexDirection={"column"} alignItems={"center"} padding={"16px"} width={"100%"} height={"100%"}  style={{backgroundImage:"linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(184, 135, 255, 0.32) 80%)"}}  >
-                            <Typography  whiteSpace={'nowrap'} fontSize={'14px'} fontWeight={400} lineHeight={'24px'} color={"#FFF"}> {share.type} </Typography> 
-                            <Typography  whiteSpace={'nowrap'} fontSize={'28px'} fontWeight={600} lineHeight={'36px'} color={"#FFF"}> {share.percentage} </Typography> 
+                        <Grid  className='border border-1 border-zinc-500' borderRadius={'12px'} display={"flex"} flexDirection={"column"} alignItems={"center"} padding={"16px"} width={"100%"} height={"100%"}  
+                                style={{backgroundImage:"linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(184, 135, 255, 0.32) 80%)"}}  >
+                            <Typography className='font-Oxanium' whiteSpace={'nowrap'} fontSize={'28px'} fontWeight={600}  lineHeight={'48px'} color={"#FFF"}> {share.percentage} </Typography> 
+                            <Typography className='font-Oxanium '  whiteSpace={'nowrap'} fontSize={'12px'} fontWeight={500} lineHeight={'24px'} color={"#FFF"}> {share.type} </Typography>                             
                         </Grid>
                      </TokenShareWrapper>
                     )
                 })}
             </TokenShares>
             <Grid className="relative w-full h-full flex justify-center items-center mt-[40px] transition-all" >
-                <Image src={"/assets/ring.svg"} alt="ring-meta" width={450} height={450} className="w-full h-full"  style={{animation: 'pulse 5.4s cubic-bezier(0.4, 0, 0.6, 1) infinite'} } />     
+                <Image src={"/assets/ring.svg"} alt="ring-meta" width={450} height={450} className="w-full h-full" />     
                 <Image alt='' width={170} height={100} src={"/tokensRemain.png"} className='w-[26%] lg:w-[20%] absolute top-[52%] text-[#FFAE9C] ' />
             </Grid>
         </Container>

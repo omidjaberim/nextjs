@@ -73,13 +73,12 @@ export default function App() {
 
 
   return (          
-    <Grid  className="w-full flex justify-center bg-black">
-      <div className="lg:max-w-[1440px] w-full flex-col items-center justify-center relative ">  
+    <Grid  className="w-full flex flex-col justify-center items-center bg-black relative">
+      <Header  scrollToId={scrollToId} selectedItem={activeId} />
       <Chip 
-        className="fixed rounded-full  hover:scale-105 transition-all z-50 top-[100px]  text-[16px] leading-8 right-1  text-white" 
-        onClick={handleSocialBtnClick} label={socialSnack ? <SocialSection /> : <SocialButton />} />
-             
-        <Header  scrollToId={scrollToId} selectedItem={activeId} />
+          className="fixed rounded-full  hover:scale-105 transition-all z-50 top-[100px]  text-[16px] leading-8 right-1  text-white" 
+          onClick={handleSocialBtnClick} label={socialSnack ? <SocialSection /> : <SocialButton />} />  
+      <div className="lg:max-w-[1440px] w-full flex-col items-center justify-center relative ">         
         <div id="meta" >
           <MarketListingTime />          
           <Testimonies />
@@ -88,9 +87,9 @@ export default function App() {
         <HeroSection />
         <Tokenomics/>
         <Roadmap/>
-        <FaqSection />
-        <Footer scrollToId={scrollToId} selectedItem={activeId} />
+        <FaqSection />        
       </div>  
+      <Footer scrollToId={scrollToId} selectedItem={activeId} />
     </Grid>
   );
 }

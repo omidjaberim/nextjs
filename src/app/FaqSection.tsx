@@ -38,9 +38,10 @@ const FAQ = ({ question, answer, expanded, handleChange, index }:{question:strin
           flexDirection: "column",
           alignItems: "flex-start",
           alignSelf: "stretch",
-          background: "#131315",
+          background: "#131315cb",
           backdropFilter: "blur(16px)",
         }}
+        className="rounded-xl z-10"
       >
         <AccordionSummary
           sx={{ width: "100%" }}
@@ -132,34 +133,22 @@ const Container = styled(Box)(({ theme }) => ({
   },
 }));
 
-const GradientText = styled("div")(({  }) => ({
-  textAlign: "left",
-  fontSize: "36px",
-  fontStyle: "normal",
-  fontWeight: "400",
-  lineHeight: "44px",
-  marginBottom : '54px',
-  background:
-    "linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)",
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  backgroundClip: "text",
-
+const GradientText = styled(Typography)(({  }) => ({
+  textAlign: "center",
+  lineHeight: "44px", 
+  background: 'linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)',
+  WebkitBackgroundClip:'text',
+  WebkitTextFillColor:'transparent',
+  backgroundClip:'text',
   [`@media (max-width: 640px)`]: {
     textAlign: "center",
-    fontSize: "28px",
     fontStyle: "normal",
-    fontWeight: "600",
-    lineHeight: "36px",
     width: "100%",
   },
 
   [`@media (max-width: 344px)`]: {
     textAlign: "center",
-    fontSize: "28px",
     fontStyle: "normal",
-    fontWeight: "600",
-    lineHeight: "36px",
     width: "100%",
   },
 }));
@@ -240,21 +229,23 @@ const FaqSection = () => {
   return (
       <Container id="FAQ"  margin={"auto"} component={"section"} className="bg-black w-full font-Oxanium px-[28px]" >        
         <Grid className="w-full h-full backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat bg-cover  " >
-        <GradientText className='mt-[116px] lg:mt-[20px] font-Oxanium' >
+        <GradientText className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>
           FAQ
         </GradientText>        
         <Grid 
-          className="flex w-full flex-1 sm:flex-col md:flex-row"
+          className="flex w-full flex-1 sm:flex-col md:flex-row mt-[29px] "
         >
           <div className="md:w-full lg:w-1/2">
-          <FaqWrapper zIndex={1} className="mb-[144px] font-Oxanium">
+          <FaqWrapper zIndex={1} className="mb-[144px] font-Oxanium ">
             {sampleFaqs.map((faq, index) => (
               <FAQ
                 key={faq.question}
                 expanded={expanded}
                 index={index}
                 handleChange={handleChange}
+                
                 {...faq}
+                
                 
               ></FAQ>
             ))}             

@@ -52,17 +52,14 @@ const Gradient = styled(Box)(({  }) => ({
 }));
 
 const Title =  styled(Typography)(({})=>({  
-width: "100%",
-textAlign: "center",
-fontSize: "36px",
-fontStyle: "normal",
-fontWeight: "400",
-lineHeight: "44px", 
-background: 'linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)',
-WebkitBackgroundClip:'text',
-WebkitTextFillColor:'transparent',
-backgroundClip:'text',
-}))
+  textAlign: "center",
+  lineHeight: "44px", 
+  background: 'linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)',
+  WebkitBackgroundClip:'text',
+  WebkitTextFillColor:'transparent',
+  backgroundClip:'text',
+  })
+)
 
 const CardStyle = styled(Box)(({})=>({  
        display: "flex",       
@@ -77,14 +74,14 @@ const CardStyle = styled(Box)(({})=>({
 const Card = ({title,subtitle,points,mt}:{title:string;subtitle:string;points:any[];mt:string})=>{
     return (
       <CardStyle 
-          className={`  w-full md:w-[224px] bg-[url('/roadmapNoise.png')] bg-cover bg-black hover:scale-105 transition-all font-Oxanium md:h-[380px] `}
+          className={`z-10  w-full md:w-[224px] bg-[url('/roadmapNoise.png')] bg-cover bg-[#000000b4] hover:scale-105 transition-all font-Oxanium md:h-[380px] `}
           sx={{marginTop:{xs:0,xl:mt}}} 
         >
         <Grid className="flex gap-[8px] items-stretch">
             <Image alt='' src={arrowImage} width={24} height={24} className="w-[24px] h-[24px]" />
-            <Typography component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"32px"}>{title}</Typography>
+            <Typography className='font-Oxanium' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"32px"}>{title}</Typography>
         </Grid>
-        <Typography component={'div'}  color={"#FFF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"32px"}>{subtitle}</Typography>
+        <Typography className='font-Oxanium' component={'div'}  color={"#FFF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"32px"}>{subtitle}</Typography>
         <ol className='pl-[16px] text-[#9A9DAB] text-[16px] leading-7 flex flex-col' >
         {points.map((point:any,index:number)=>{
             return <li key={point+index} className='flex justify-start items-baseline' ><div className=' mr-2 rounded-[5px] w-[5px] p-[4px] bg-[#9A9DAB]' ></div> {point}</li>
@@ -121,11 +118,11 @@ const roadMapData = [{
 
 const Roadmap = ()=>{
     return (
-          <Grid id='roadmap'  className='w-full  flex flex-col px-4 py-[60px] items-center  '  >
+          <Grid id='roadmap'  className='w-full flex flex-col px-4 py-[60px] items-center'  >
             <Grid  className="w-full h-full backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat" >
-              <div className='mt-[216px] lg:mt-0 w-full h-full flex flex-col' >
-                  <Title className='my-[80px]' >RoadMap</Title>
-                  <Grid className='w-full flex flex-wrap justify-center gap-5' >
+              <div className='mt-[6px] lg:mt-0 w-full h-full flex flex-col' >
+                  <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}  >RoadMap</Title>
+                  <Grid className='w-full flex flex-wrap justify-center gap-5 mt-[29px]' >
                   {
                       roadMapData.map((data,index)=>{
                       return <Card mt={index % 2 ? "280px":"0px" } key={index} title={data.title} subtitle={data.subtitle} points={data.points} />

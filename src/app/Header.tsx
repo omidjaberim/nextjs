@@ -31,10 +31,10 @@ const Header = (props: IProp) => {
 
   return (
     <Grid
-      className="bg-[url('/footerNoise.png')] bg-auto  w-[calc(100vw-5px)] xl:w-[1440px] flex justify-center items-center  font-Oxanium text-[12px] 
-              lg:text-[14px] text-[#fafafa] leading-8	font-semibold py-[12px] bg-[#131315f1] shadow-black/5 fixed top-0 z-50"
+      className="bg-[url('/footerNoise.png')] bg-auto  w-full flex justify-center items-center  font-Oxanium text-[12px] 
+              lg:text-[14px] text-[#fafafa] leading-8 font-semibold py-[12px] bg-[#131315f1] shadow-black/5 fixed top-0 z-50"
     >
-      <Grid className="flex justify-between sm:w-11/12 md:w-11/12">
+      <Grid className="flex justify-between w-[calc(100vw)] xl:w-[1440px]">
         <Grid className="w-1/2 md:w-3/4 flex justify-start gap-[2px] md:gap-[7px] xl:gap-[40px]">
           <Image
             src={HamMenu}
@@ -109,7 +109,7 @@ const Header = (props: IProp) => {
             />
           </Grid>
         </Grid>
-        <Grid className="w-1/2 md:w-1/4 flex items-center justify-end gap-[4px] xl:gap-[16px]">
+        <Grid className="w-1/2 md:w-1/4 flex items-center justify-end gap-[4px] xl:gap-[16px] px-2">
           <a
             href="https://meta-v.gitbook.io/meta-v/"
             className="hidden xl:flex cursor-pointer"
@@ -119,7 +119,6 @@ const Header = (props: IProp) => {
           </a>
           <StyledButton onClick={() => connectWallet()}>
             <span className="font-semibold text-[12px] lg:text-[14px] flex ">
-              {/* Connect <span> Wallet</span> */}
               {account
                 ? account.slice(0, 4) + "..." + account.slice(-4)
                 : "Connect Wallet"}

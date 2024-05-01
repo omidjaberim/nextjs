@@ -34,26 +34,15 @@ const FoundationSection = styled(Box)(({ theme }) => ({
   },
 }));
 
-const GradientText = styled("div")(() => ({
+const GradientText = styled(Typography)(({})=>({  
   textAlign: "center",
-  fontSize: "36px",
-  fontStyle: "normal",
-  fontWeight: "400",
-  lineHeight: "44px",
-  background:
-    "linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)",
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  backgroundClip: "text",
-  [`@media (max-width: 650px)`]: {
-    textAlign: "center",
-    fontFamily: "Oxanium",
-    fontSize: "28px",
-    fontStyle: "normal",
-    fontWeight: "600",
-    lineHeight: "36px",
-  },
-}));
+  lineHeight: "44px", 
+  background: 'linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)',
+  WebkitBackgroundClip:'text',
+  WebkitTextFillColor:'transparent',
+  backgroundClip:'text',
+  })
+)
 
 const Tab = styled(Box)(({ active }: { active: string }) => ({
   display: "flex",
@@ -61,10 +50,7 @@ const Tab = styled(Box)(({ active }: { active: string }) => ({
   alignItems: "center",
   padding: "2px",
   position: "relative",
-  backgroundImage:
-    active === "true"
-      ? "linear-gradient( to bottom, #00000000 0%, #222326 80%, #131315 100%)"
-      : "",
+  
   borderRadius: "10px",
   maxWidth: "368px",
   cursor: "pointer",
@@ -82,20 +68,16 @@ const Tab = styled(Box)(({ active }: { active: string }) => ({
 
 const TabInner = styled(Box)(({}) => ({
   display: "flex",
-  padding: "24px",
   flexDirection: "column",
   alignItems: "flex-start",
-  gap: "8px",
-  backgroundImage: "linear-gradient(180deg, #222326, #131315)",
+  background: "linear-gradient(180deg, #222326, #131315)",
   borderRadius: "inherit",
   flex: "1 0 0",
   [`@media (max-width: 340px)`]: {
-    padding: " 8px 16px",
     fontFamily: "Oxanium",
     fontSize: "20px",
     fontStyle: "normal",
     fontWeight: "600",
-    lineHeight: "32px",
     width: "100%",
     height: "100%",
     flex: 1,
@@ -139,9 +121,9 @@ const tabsData = [
     },
   },
   {
-    title: "Metaverse",
+    title: "Blockchain",
     description: `In META-V, blockchain is essential for asset ownership, transactions, and governance. Smart contracts secure and automate blockchain transactions. NFTs represent unique digital assets like virtual land, items, and artworks. Blockchain's transparency and immutability foster trust in META-V's economy. The META-V token (MV) facilitates transactions for virtual goods, services, assets, and digital economic activities.`,
-    subtitle: "Metaverse",
+    subtitle: "Blockchain",
     scene: {
       previewImage: Blockchain.src,
       sceneURL: "https://prod.spline.design/Y8mjjMKWxrKFgrG5/scene.splinecode",
@@ -188,16 +170,16 @@ const Tabs = ({
               onClick={(event) => onTabClick(event, index)}
             >
               <TabInner
-                className={`transition-all py-[25px]  font-Oxanium md:rounded-[22px] hover:border-x-1 hover:border-t-2 hover:border-[#6C6E78] '+ ${
+                className={`md:px-[24px] px-[16px] transition-all py-[11px] md:py-[25px] font-Oxanium md:rounded-[22px] hover:border-x-1 hover:border-t-2 hover:border-[#6C6E78] '+ ${
                   active ? "border-x-1 border-t-2 border-[#FDD4FC]" : ""
                 }`}
               >
-                <Title active={active.toString()}>
+                <Title active={active.toString()} className="font-Oxanium" >
                   {" "}
                   {!isSmallScreen ? tab.title : tab.subtitle}
                 </Title>
                 {!isSmallScreen && active && (
-                  <Description>{tab.description}</Description>
+                  <Description className="leading-7 text-[#ced0d6]" >{tab.description}</Description>
                 )}
               </TabInner>
             </Tab>
@@ -274,11 +256,11 @@ const Hero = () => {
       id="Technology"
     >
       {isSmallScreen ? (
-        <GradientText className="lg:mt-0 mt-[48px] text-[28px] font-Oxanium font-bold">
+        <GradientText className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>
           Technological <br /> Foundations
         </GradientText>
       ) : (
-        <GradientText className="text-[28px] font-Oxanium font-bold">
+        <GradientText className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>
           Technological Foundations <br /> of META-V
         </GradientText>
       )}
@@ -310,16 +292,14 @@ const Hero = () => {
             if (!active) return;
             return (
               <Typography
-                className="font-Oxanium mt-[24px]"
+                className="font-Oxanium mt-[24px] leading-7 text-[#ced0d6]"
                 key={index}
                 variant="body1"
-                padding={"16px"}
                 fontSize={"14px"}
                 fontWeight={400}
-                lineHeight={"24px"}
                 textAlign={"center"}
-                color={"#9A9DAB"}
               >
+                
                 {tab.description}
               </Typography>
             );

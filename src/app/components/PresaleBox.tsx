@@ -29,7 +29,6 @@ import {
   usdtReadFunction,
   usdtWriteFunction,
 } from "context/hooks";
-import Image from "next/image";
 
 function PresaleBox() {
   const matches = useMediaQuery("(max-width:650px)");
@@ -268,13 +267,12 @@ function PresaleBox() {
           <Typography
             variant="h1"
             sx={{
-              color: "#EBE9ED",
-              fontSize: { xs: "28px", sm: "28px" },
+              color: "#EBE9ED",              
               lineHeight: { xs: "32px", sm: "36px" },
               fontWeight: "600",
               textAlign: "left",
             }}
-            className="flex items-center mb-[8px] font-Oxanium"
+            className="flex items-center mb-[8px] font-Oxanium text-[20px] md:text-[28px]"
           >
             PreSale
             <span
@@ -614,8 +612,7 @@ function PresaleBox() {
                   cursor: "pointer",
                   flexDirection: "row",
                   justifyContent: "center",
-                  alignItems: "center",
-                  gap: "4px",
+                  alignItems: "center",                  
                   borderRadius: "8px",
                   py: { xs: 1, sm: 0.4 },
                   px: { xs: 1.8, md: 1.8 },
@@ -623,17 +620,17 @@ function PresaleBox() {
                   background: buyWith === text ? "#514e57" : "transparent",
                   transition: "all .5s",
                 }}
+                className="gap-0"
               >
                 <Grid component={"img"} alt="" src={img.src} width="20px" />
                 <Typography
                   variant="subtitle2"
                   sx={{
-                    color: "#EBE9ED",
-                    fontSize: { xs: "16px", sm: "16px" },
+                    color: "#EBE9ED",                    
                     fontWeight: buyWith === text ? "400" : "700",
                     lineHeight: "24px",
                   }}
-                  className="mx-1 font-Oxanium"
+                  className="mx-1 font-Oxanium md:text-[16px] text-[12px] leading-4 md:leading-6"
                 >
                   {text}
                 </Typography>

@@ -125,8 +125,7 @@ import next from "next";
   ]
 
 const Comments =({profile ,comment }:{profile:any;comment:string})=>{
-  const [hover,setHover] = useState(false);
-
+    const [hover,setHover] = useState(false);
     return (
         <Grid component={"div"} onMouseOver={()=>{setHover(true)}} onMouseLeave={()=>{setHover(false)}}  sx={{
             display:"flex",
@@ -142,15 +141,15 @@ const Comments =({profile ,comment }:{profile:any;comment:string})=>{
             cursor:"pointer",
 
         }}
-          className="font-Oxanium text-[14px] leading-6 text-white"
+          className=" text-[14px] leading-6 text-white"
         >
-          <Typography variant='body1'  fontSize={'14px'} fontWeight={400} lineHeight={'24px'} color={"#FFF"}>  {comment} </Typography> 
+          <Typography variant='body1' className="font-Oxanium"  fontSize={'14px'} fontWeight={400} lineHeight={'24px'} color={"#FFF"}>  {comment} </Typography> 
           <Grid className="flex gap-[16px]  justify-center items-center" >
               <Grid className="flex w-[48px] h-[48px] rounded-[48px] border border-1 border-solid border-[#979BFF]" >
                   <Grid component={"img"} borderRadius={"inherit"} src={profile.avatar}   width={"100%"}  height={"100%"} />
               </Grid>    
               <Grid display={"flex"}  flex={1} flexDirection={"column"}>
-                  <Typography variant='body1'  fontSize={'14px'} fontWeight={600} lineHeight={'24px'} color={"linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)"} 
+                  <Typography variant='body1' className="font-Oxanium"   fontSize={'14px'} fontWeight={600} lineHeight={'24px'} color={"linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)"} 
                   sx={{
                     background: hover ? 'linear-gradient(93deg, #CDCFFF 16.47%, #FED6FF 49.36%, #FFE5DF 81.61%)' : "#FFF",
                     WebkitBackgroundClip:'text',
@@ -169,7 +168,7 @@ const Comments =({profile ,comment }:{profile:any;comment:string})=>{
     {next:any;previous:any;goToSlide:any,[x:string]:any} ) => {
     const { carouselState: { currentSlide ,totalItems,slidesToShow} } = rest;
     return (
-      <Grid className="flex gap-[24px] items-center justify-center" >
+      <Grid className="flex gap-[24px] items-center justify-center mt-[0px]" >
         <Grid  className="hover:scale-110" component={"button"}   
             sx={{ all: "unset" ,cursor:"pointer", "&:focus":{ outline:"none"}  , 
             width:"48px",height:"48px" ,borderRadius:"140px" , background:"#222326", 
@@ -197,20 +196,20 @@ const Comments =({profile ,comment }:{profile:any;comment:string})=>{
             transitionDuration={500}  partialVisible={true} 
             centerMode={!true} responsive={responsive} renderButtonGroupOutside={true}             
             customButtonGroup={<ButtonGroup next={()=>next} previous={()=>next} goToSlide={()=>{}}   />} >
-            {commentsData.map((commentData,index)=>(<Comments key={index} profile={commentData.profile} comment={commentData.comment}/>))}
+            {commentsData.map((commentData,index)=>(<Comments  key={index} profile={commentData.profile} comment={commentData.comment}/>))}
           </Carousel>
       )
   }
 
-const Testimonies = () => {
-  return (
-  <Stack className="bg-black md:mt-0 sm:mt-[660px]  px-[16px] md:px-0" component={"section"}  width={"100%"} justifyContent={"center"} gap={8} paddingY={{xl:"80px" , sm:"80px" , xs:"80px"  }} >
-      <span className="mx-auto text-center sm:pt-[52px] font-Oxanium text-[36px] leading-10 bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >
-        The future of the <br/> metaverse
-      </span>
-    <CarouselWrapper/>
-  </Stack>
-  )
-};
+  const Testimonies = () => {
+    return (
+    <Stack className="bg-black  sm:mt-[360px] md:mt-[160px] lg:mt-0  px-[16px] md:px-0" component={"section"}  width={"100%"} justifyContent={"center"} gap={4} paddingY={{xl:"80px" , sm:"80px" , xs:"80px"  }} >
+        <span className="mx-auto text-center sm:pt-[52px] font-Oxanium text-[36px] leading-10 bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >
+          The future of the <br/> metaverse
+        </span>
+      <CarouselWrapper/>
+    </Stack>
+    )
+  };
 
 export default Testimonies;
