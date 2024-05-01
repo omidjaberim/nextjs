@@ -74,7 +74,7 @@ const CardStyle = styled(Box)(({})=>({
 const Card = ({title,subtitle,points,mt}:{title:string;subtitle:string;points:any[];mt:string})=>{
     return (
       <CardStyle 
-          className={`z-10  w-full md:w-[224px] bg-[url('/roadmapNoise.png')] bg-cover bg-[#000000b4] hover:scale-105 transition-all font-Oxanium md:h-[405px] `}
+          className={`z-10  w-full md:w-[224px] bg-[url('/roadmapNoise.png')] bg-cover bg-[#131315cb] hover:scale-105 transition-all font-Oxanium md:h-[405px] `}
           sx={{marginTop:{xs:0,xl:mt}}} 
         >
         <Grid className="flex gap-[8px] items-stretch">

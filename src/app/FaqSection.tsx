@@ -41,7 +41,7 @@ const FAQ = ({ question, answer, expanded, handleChange, index }:{question:strin
           background: "#131315cb",
           backdropFilter: "blur(16px)",
         }}
-        className="rounded-xl z-10"
+        className="rounded-xl z-10 bg-[url('/roadmapNoise.png')] bg-cover"
       >
         <AccordionSummary
           sx={{ width: "100%" }}
