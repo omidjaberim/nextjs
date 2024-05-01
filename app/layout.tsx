@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="font-Oxanium">
         {" "}
-        <Web3Modal>{children}</Web3Modal>;
+        <Web3Modal>{children}</Web3Modal>
       </body>
     </html>
   );
