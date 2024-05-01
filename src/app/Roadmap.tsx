@@ -129,7 +129,6 @@ const Roadmap = ()=>{
                       })
                   }
                   </Grid>
-                  <Gradient/>
               </div>
             </Grid>
           </Grid>
