@@ -10,9 +10,6 @@ import Image from "next/image";
 const FoundationSection = styled(Box)(({ theme }) => ({
   width: "100%",
   position: "relative",
-  backgroundSize: "contain",
-  backgroundRepeat: "repeat",
-  backgroundImage: `url(${GriLineImage.src})`,
   display: "flex",
   gap: "30px",
   padding: "80px 80px",
@@ -252,7 +249,7 @@ const Hero = () => {
       margin={"auto"}
       padding={"16px"}
       component={"section"}
-      className="bg-black "
+      className="bg-black backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat"
       id="Technology"
     >
       {isSmallScreen ? (
