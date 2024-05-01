@@ -30,10 +30,9 @@ const PresaleSection = ()=>{
     }
 
     return (
-      <Grid className="w-full backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat  " 
-          sx={{fill:"linear-gradient(270deg, rgba(11, 11, 12, 0.64) 0%, rgba(34, 35, 38, 0.64) 21.5%, rgba(34, 35, 38, 0.64) 76.5%, rgba(1, 2, 10, 0.34) 100%)"}} >            
-        <Grid className="w-full flex sm:h-[1140px] lg:h-[1140px] backdrop-brightness-150 bg-gradient-to-b from-[rgba(187,143,238,0.7)]  to-black "   >
-          <Grid className="w-full relative px-[16px]  md:px-0 bg-[url('/Background/Background/background.png')] bg-no-repeat bg-top" >            
+      <Grid className="w-full backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat" >            
+        <Grid className="w-full flex sm:h-[1140px] lg:h-[1140px] backdrop-brightness-150 bg-gradient-to-b from-[rgba(81,63,100,0.7)]  via-[rgb(49,27,68,0.7)] to-black "   >
+          <Grid className="w-full relative px-[16px]  md:px-0 bg-[url('/Background/Background/bgcity1.png')] bg-no-repeat bg-top"  >            
             <div 
               id="presale" 
               className="w-full font-Roboto flex justify-center items-center flex-col relative px-1"

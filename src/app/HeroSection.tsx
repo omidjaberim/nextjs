@@ -249,7 +249,7 @@ const Hero = () => {
       margin={"auto"}
       padding={"16px"}
       component={"section"}
-      className="bg-black backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat"
+      className="bg-black backdrop-brightness-150 bg-[url('/horizontalLineBg.png'),url('/verticalLineBg.png')] bg-top bg-no-repeat bg-contain"
       id="Technology"
     >
       {isSmallScreen ? (

@@ -10,10 +10,10 @@ import { Grid } from '@mui/material';
 const Gradient = styled(Box)(({  }) => ({
   zIndex:0,
   position: "absolute",
-  top: "110%",
-  left: "100%",
-  width: "100%",
-  height: "180%",
+  top: "50%",
+  left: "50%",
+  width: "75%",
+  height: "50%",
   transform: "translate(-50%, -50%)",
   flexShrink: "0",
   borderRadius: "50%",
@@ -30,12 +30,12 @@ const Gradient = styled(Box)(({  }) => ({
     height:"60%",
   },
 
-  [`@media (max-width: 820px)`]: {
+  [`@media (max-width: 980px)`]: {
     top:"50%",
     width:"50%",
     height:"80%",
   },
-  [`@media (max-width: 344px)`]: {
+  [`@media (max-width: 340px)`]: {
   top:"8%",
   left:"0%",  
   width:"200px",
@@ -119,7 +119,7 @@ const roadMapData = [{
 const Roadmap = ()=>{
     return (
           <Grid id='roadmap'  className='w-full flex flex-col px-4 py-[60px] items-center'  >
-            <Grid  className="w-full  backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat" >
+            <Grid  className="w-full  backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.png'),url('/verticalLineBg.png')] bg-top bg-no-repeat bg-contain" >
               <div className='mt-[6px] lg:mt-0 w-full  flex flex-col' >
                   <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}  >RoadMap</Title>
                   <Grid className='w-full flex flex-wrap justify-center gap-5 mt-[29px]' >

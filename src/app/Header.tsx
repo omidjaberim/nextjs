@@ -40,7 +40,7 @@ const Header = (props: IProp) => {
             className="sm:flex lg:hidden cursor-pointer mx-2 md:mx-0"
             onClick={() => toggleDrawer(!open)}
           />
-          <Image src={Logo} alt="meta" width={32} height={30} />
+          <Image src={Logo} alt="meta" width={42} height={42} className="ml-1" />
           <Grid className="text-white sm:hidden lg:flex items-center gap-[2px] md:gap-[22px] xl:gap-[32px]">
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${

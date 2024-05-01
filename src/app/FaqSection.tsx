@@ -228,7 +228,7 @@ const FaqSection = () => {
 
   return (
       <Container id="FAQ"  margin={"auto"} component={"section"} className="bg-black w-full font-Oxanium px-[28px]" >        
-        <Grid className="w-full h-full backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.svg'),url('/verticalLineBg.svg')] bg-top bg-no-repeat  " >
+        <Grid className="w-full h-full backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.png'),url('/verticalLineBg.png')] bg-top bg-no-repeat bg-contain " >
         <GradientText className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>
           FAQ
         </GradientText>        
