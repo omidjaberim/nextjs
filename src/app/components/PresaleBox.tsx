@@ -16,7 +16,6 @@ import {
   ToastNotify,
 } from "./SmallComponents/AppComponents";
 import TimerCountDown from "./SmallComponents/Timer";
-
 import { preSaleAddress } from "context/environment";
 import { AppContext } from "context/utils";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
@@ -36,7 +35,7 @@ function PresaleBox() {
   const { account } = useContext(AppContext);
   const { open } = useWeb3Modal();
   const [buyWith, setBuyWith] = useState<string>("USDT");
-  const [endTime, setEndTime] = useState<number | string>(1710947541);
+  const [endTime, setEndTime] = useState<number | string>(1722628800);
   const [amount, setAmount] = useState<number | string>("");
   const [preSaleEndedStatus, setPresaleEndedStatus] = useState<boolean>(false);
   const [recivedTokens, setreceivedTokens] = useState<number | string>(0);
@@ -225,8 +224,7 @@ function PresaleBox() {
   return (
     <Grid
       width={{ xs: "100%", md: "max-content" }}
-      className="max-w-[640px] font-Oxanium z-20"
-      id="presale"
+      className="max-w-[640px] font-Oxanium z-20"      
     >
       <ToastNotify alertState={alertState} setAlertState={setAlertState} />
       <Stack
@@ -257,14 +255,7 @@ function PresaleBox() {
           gap: 2,
         }}
         className="px-[24px] py-[20px] rounded-[26px] border-[#36303C] border-t-[3px] border-x-2 bg-[#231b2a] bg-[url('/Noise.png')] bg-cover "
-      >
-        <Backdrop
-          sx={{ color: '#fff', zIndex: 52 }}
-          open={true}
-          className="w-full lg:w-[50%] lg:top-[500px] top-[700px] mx-auto h-full"
-        >
-          <span className="text-[52px] font-bold" >Comming soon</span>
-        </Backdrop>
+      >        
         <Stack
           flexDirection={{ xs: "column", md: "row" }}
           justifyContent={"space-between"}
@@ -339,11 +330,12 @@ function PresaleBox() {
                 style={{
                   color: "#B28FEE",
                 }}
-                className="font-bold"
+                className="font-bold font-Oxanium"
               >
                 1
-              </span>{" "}
-              $META-V <span className="text-[#9A9DAB]">=</span>
+              </span>
+              <span className="mx-1 font-Oxanium font-bold" >$MV</span>
+              <span className="text-[#9A9DAB]">=</span>
             </Typography>
             <Typography
               variant="body1"
@@ -517,11 +509,11 @@ function PresaleBox() {
                 style={{
                   color: "#e4acb2",
                 }}
-                className="font-Oxanium"
+                className="font-Oxanium text-2xl"
               >
                 {toLocalFormat(totalSoldTokens)}
               </span>{" "}
-              {matches && <br />}/ 9,175,000
+              {<br />}/ <span className="text-[20px]" >200,000,000</span>
             </Typography>
           </Stack>
           <Stack gap={1}>
@@ -552,11 +544,11 @@ function PresaleBox() {
                 style={{
                   color: "#e4acb2",
                 }}
-                className="font-Oxanium"
+                className="font-Oxanium text-2xl"
               >
                 ${toLocalFormat(amountRaisedForAll)}
               </span>{" "}
-              {matches && <br />}/ 975,000
+              { <br />} /<span className="text-[20px]" > 3,600,000 </span>
             </Typography>
           </Stack>
         </Stack>

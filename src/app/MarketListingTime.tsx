@@ -36,8 +36,9 @@ const PresaleSection = ()=>{
             <div 
                
               className="w-full font-Roboto flex justify-center items-center flex-col relative px-1"
+              
               >
-                <div className="w-full  inset-0 z-0" >
+                <div  className="w-full  inset-0 z-0" >
                   <Image alt="bg" src={"/star-img.svg"} width={24} height={24} className="absolute z-50 top-[32%] left-[10%]" style={{animation: 'pulse 2.2s cubic-bezier(0.4, 1, 0.6, 1) infinite'}} />
                   <Image alt="bg" src={"/star3.svg"} width={22} height={22} className="absolute z-50 top-[52%] left-[35%]" style={{animation: 'pulse 2.3s cubic-bezier(0.4, 1, 0.6, 1) infinite'}}/>
                   <Image alt="bg" src={"/star2.svg"} width={16} height={16} className="absolute z-50 top-[72%] left-[15%]" style={{animation: 'pulse 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}} />
@@ -61,7 +62,7 @@ const PresaleSection = ()=>{
                     <Typography  sx={subTypeStyle} className="font-Oxanium"  >
                         The convergence of reality and innovation, where aspirations are converted into digital realms.
                     </Typography>
-                      <div className="my-[40px]" >
+                      <div className="my-[40px]" id="presale" >
                       <StyledButton  >
                       <Link 
                             className="text-[#131315] leading-5 font-bold text-[20px] px-[15px] py-[10px] font-Oxanium"  

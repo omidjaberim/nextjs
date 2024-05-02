@@ -16,7 +16,7 @@ const Title =  styled(Typography)(({})=>({
 
 const About = ()=>{
   return (
-    <section id='about' className={"w-full flex flex-col items-center bg-black font-Oxanium"}  >        
+    <section id='about' className={"w-full flex flex-col items-center bg-black font-Oxanium pt-[62px]"}  >        
         <div className={"w-full flex justify-center items-center mt-[10px]"} >
             <img src={aboutImage.src} className="w-[108.097px] h-[34px] mr-[4px] md:w-[90.097px] md:h-[24px] md:mx-[4px]" alt="about"/>
             <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>META-V</Title>            
@@ -32,8 +32,8 @@ const About = ()=>{
             participation, and diverse interactions beyond physical boundaries.
         </div>
         <div className='w-full flex justify-center items-center'>
-            <Image alt='' src="/WaveformSmall.svg" width={420} height={260} className='lg:w-[100%] flex md:hidden' />
-             <Image alt='' src="/Waveformfull.png" width={420} height={260} className='lg:w-[70%] hidden md:flex '  /> 
+            <Image alt='' src="/WaveformSmall.png" width={420} height={260} className='lg:w-[100%] flex md:hidden' />
+            <Image alt='' src="/Waveformfull.png" width={420} height={260} className=' w-full hidden md:flex '  /> 
         </div>
     </section>
   );

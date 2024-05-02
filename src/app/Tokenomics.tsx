@@ -106,7 +106,7 @@ const tokenShareData = [
 ]
 const Tokenomics = ()=>{
     return(
-        <Container id="tokenomics"   className="bg-black  flex flex-col " >
+        <Container id="tokenomics"   className="bg-black  flex flex-col pt-[72px]" >
            <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"} >Tokenomics</Title>
             <TokenShares>
                 {tokenShareData.map((share,index)=>{
