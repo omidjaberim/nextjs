@@ -33,10 +33,10 @@ export default function TimerCountDown({ time }:{time:number}) {
       } else {
         setCountDateTime({
           ...countTime,
-          time_days: days,
-          time_Hours: hours,
-          time_Minusts: minuts,
-          time_seconds: seconds,
+          time_days: Number(days),
+          time_Hours: Number(hours),
+          time_Minusts: Number(minuts),
+          time_seconds: Number(seconds),
         });
       }
     }, 1000);
