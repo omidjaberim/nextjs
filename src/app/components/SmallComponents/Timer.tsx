@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import {  Grid } from "@mui/material";
 
-export default function TimerCountDown({ time }:{time:any}) {
+export default function TimerCountDown({ time }:{time:number}) {
   const [countTime, setCountDateTime] = useState({
     time_days: 0,
     time_Hours: 0,
