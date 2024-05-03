@@ -43,7 +43,7 @@ export default function TimerCountDown() {
   };
   useEffect(() => {
     startTime();
-  }, [time]);
+  }, []);
 
   return (
       <Grid className="flex items-center justify-evenly w-full" >       
