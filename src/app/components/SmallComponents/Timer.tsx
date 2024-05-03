@@ -50,7 +50,6 @@ export default function TimerCountDown({ time }:{time:number}) {
         <Grid  
           className="bg-[url('/timeNoise2.png')] bg-auto bg-[#231b2ada]  pt-2 w-[62px] h-[70px] md:w-[88px] md:h-[90px]  rounded-[16px] border border-[#535358]" display="flex" flexDirection="column" alignItems="center"   >
             <Grid className="text-[28px] font-semibold	 md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >
-              { countTime.time_days && countTime.time_days > 9 ? "" : 0}
               {countTime.time_days}              
             </Grid>
             <span className="text-[12px] leading-6 font-normal	text-white font-Oxanium">Day</span>          
@@ -58,7 +57,7 @@ export default function TimerCountDown({ time }:{time:number}) {
         <Grid  
           className="bg-[url('/timeNoise2.png')] bg-auto pt-2 md:w-[90px] w-[62px] h-[70px] md:h-[88px]   bg-[#231b2ada]  rounded-[16px] border border-[#535358] text-gradient-to-r from-[#FED3CA] to-[#FFA998]" display="flex" flexDirection="column" alignItems="center"   >
             <Grid className="text-[28px] font-semibold	md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >            
-            {countTime.time_Hours > 9 ? "" : 0}
+        
             {countTime.time_Hours}
             </Grid>
             <span className={"text-[12px]  leading-6 text-white"}>{"Hours"}</span>          
@@ -66,7 +65,7 @@ export default function TimerCountDown({ time }:{time:number}) {
         <Grid  
           className="bg-[url('/timeNoise2.png')] bg-cover  bg-[#231b2ada] pt-2 w-[62px] h-[70px] md:w-[90px] md:h-[88px]  rounded-[16px] border border-[#535358] text-gradient-to-r from-[#FED3CA] to-[#FFA998]" display="flex" flexDirection="column" alignItems="center"   >
             <Grid className="text-[28px] font-semibold	 md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >            
-            {countTime.time_Minusts > 9 ? "" : 0}
+            
             {countTime.time_Minusts}
             </Grid>
             <span className={"text-[12px]  leading-6 text-white"}>{"Minutes"}</span>          
@@ -74,7 +73,7 @@ export default function TimerCountDown({ time }:{time:number}) {
         <Grid  
           className="bg-[url('/timeNoise2.png')] bg-cover  bg-[#231b2ada] pt-2 w-[62px] h-[70px] md:w-[90px] md:h-[88px]  rounded-[16px] border border-[#535358] text-gradient-to-r from-[#FED3CA] to-[#FFA998]" display="flex" flexDirection="column" alignItems="center"   >
             <Grid className="text-[28px] font-semibold	 md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >          
-            {countTime.time_seconds > 9 ? "" : 0}
+            
             {countTime.time_seconds}
             </Grid>
             <span className={"text-[12px]  leading-6 text-white"}>{"Seconds"}</span>          
