@@ -35,7 +35,7 @@ function PresaleBox() {
   const { account } = useContext(AppContext);
   const { open } = useWeb3Modal();
   const [buyWith, setBuyWith] = useState<string>("USDT");
-  const [endTime, setEndTime] = useState<number | string>(1722628800);
+  const [endTime, setEndTime] = useState<number>(1722628800);
   const [amount, setAmount] = useState<number | string>("");
   const [preSaleEndedStatus, setPresaleEndedStatus] = useState<boolean>(false);
   const [recivedTokens, setreceivedTokens] = useState<number | string>(0);
@@ -135,7 +135,7 @@ function PresaleBox() {
           dec = Number(dec?.toString());
           let userData: any = await preSaleReadFunction("users", [account]);
           setuserPurchasedTokens(
-            parseFloat(formatUnits(userData[3]?.toString(), dec))?.toFixed(2)
+            parseFloat(formatUnits(userData[6]?.toString(), dec))?.toFixed(2)
           );
         } catch (e) {
           console.log(e);
