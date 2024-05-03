@@ -246,7 +246,7 @@ function PresaleBox() {
           Market Listing time
         </Typography>
         <Grid width={"100%"} maxWidth="500px">
-          <TimerCountDown time={endTime} />
+          <TimerCountDown />
         </Grid>
       </Stack>
       <Stack
