@@ -3,7 +3,12 @@ import moment from "moment";
 import {  Grid } from "@mui/material";
 
 export default function TimerCountDown({ time }:{time:number}) {
-  const [countTime, setCountDateTime] = useState({
+  const [countTime, setCountDateTime] = useState<({
+    time_days: number;
+    time_Hours: number;
+    time_Minusts: number;
+    time_seconds: number;
+  })>({
     time_days: 0,
     time_Hours: 0,
     time_Minusts: 0,
