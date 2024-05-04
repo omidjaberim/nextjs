@@ -17,7 +17,7 @@ export default function TimerCountDown() {
   
 
   const startTime = async () => {
-    let until = moment.unix(1722628800).format("x");
+    let until = moment.unix(1718798293).format("x");
     let interval = setInterval(() => {
       let now = moment().format("x");
       const distance = +until - +now;
