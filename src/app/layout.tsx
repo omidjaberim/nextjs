@@ -14,6 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/assets/logo.svg" type="image/png" sizes="32x32" />
+      </head>
       <body className="font-Oxanium">
         {" "}
         <Web3Modal>{children}</Web3Modal>
