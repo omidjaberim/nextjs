@@ -227,7 +227,7 @@ function PresaleBox() {
       className="max-w-[640px] font-Oxanium z-20"      
     >
       <ToastNotify alertState={alertState} setAlertState={setAlertState} />
-      <Stack
+{/*       <Stack
         gap={{ xl: 2, md: 2, xs: 2 }}
         maxWidth={"100%"}
         px={{ xs: 0, sm: 4 }}
@@ -248,7 +248,7 @@ function PresaleBox() {
         <Grid width={"100%"} maxWidth="500px">
           <TimerCountDown />
         </Grid>
-      </Stack>
+      </Stack> */}
       <Stack
         mt={6}
         sx={{
