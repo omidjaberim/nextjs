@@ -40,7 +40,6 @@ export function StyledButton({ children, ...props }: { children: any;[x:string]:
           color: "#131315",
           background:
             "linear-gradient(92.51deg, #979BFF 0.48%, #FED6FF 50.74%, #FFAE9C 100%)",
-          fontSize: "22px",
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
           textTransform: "capitalize",
           borderRadius: "12px",

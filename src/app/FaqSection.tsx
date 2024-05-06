@@ -41,7 +41,7 @@ const FAQ = ({ question, answer, expanded, handleChange, index }:{question:strin
           background: "#131315cb",
           backdropFilter: "blur(16px)",
         }}
-        className="rounded-xl z-10 bg-[url('/roadmapNoise.png')] bg-cover"
+        className="rounded-xl z-10 bg-[url('/roadmapNoise.png')] bg-cover "
       >
         <AccordionSummary
           sx={{ width: "100%" }}
@@ -227,13 +227,12 @@ const FaqSection = () => {
   };
 
   return (
-      <Container id="FAQ"  margin={"auto"} component={"section"} className="bg-black w-full font-Oxanium px-[28px]" >        
-        <Grid className="w-full h-full backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.png'),url('/verticalLineBg.png')] bg-top bg-no-repeat bg-contain " >
+      <Container id="FAQ"  margin={"auto"} component={"section"} className="bg-[#11121A] w-full font-Oxanium px-[28px] " >        
         <GradientText className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>
           FAQ
         </GradientText>        
         <Grid 
-          className="flex w-full flex-1 sm:flex-col md:flex-row mt-[29px] "
+          className="flex w-full flex-1 sm:flex-col md:flex-row mt-[29px] lg:max-w-[1440px] mx-auto"
         >
           <div className="md:w-full lg:w-1/2">
           <FaqWrapper zIndex={1} className="mb-[144px] font-Oxanium ">
@@ -251,15 +250,6 @@ const FaqSection = () => {
             ))}             
           </FaqWrapper>
           </div>
-          <div className="md:w-full lg:w-1/2 flex justify-center items-center lg:mt-[68px] mb-[102px] lg:mb-0 " > 
-            <Image alt="" src={faq} width={336} height={388}  />
-          </div>
-        </Grid>
-        <Image alt="bg" src={"/star2.svg"} width={16} height={16} className="absolute z-50 top-[52%] right-[15%]" style={{animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',pointerEvents: "none",userSelect: "none"}} />
-        <Image alt="bg" src={"/star2.svg"} width={22} height={22} className="absolute z-50 top-[12%] right-[36%]" style={{animation: 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',pointerEvents: "none",userSelect: "none"}} />
-        <Image alt="bg" src={"/star3.svg"} width={32} height={32} className="absolute z-50 top-[22%] right-[28%]" style={{animation: 'pulse 2.9s cubic-bezier(0.4, 0, 0.6, 1) infinite',pointerEvents: "none",userSelect: "none"}} />
-        <Image alt="bg" src={"/star3.svg"} width={26} height={26} className="absolute z-50 top-[72%] right-[45%]" style={{animation: 'pulse 3.4s cubic-bezier(0.4, 0, 0.6, 1) infinite',pointerEvents: "none",userSelect: "none"}} />
-        <Gradient/>
         </Grid>
       </Container>
   );

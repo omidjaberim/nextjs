@@ -135,13 +135,12 @@ const Comments =({profile ,comment }:{profile:any;comment:string})=>{
             width:{xl : "416px" ,md:"416px" , xs : "368px" } , 
             padding:"24px" , 
             margin:"10px",
-            background: "#131315",
             backdropFilter: "blur(16px)",
             borderRadius:"12px",
             cursor:"pointer",
 
         }}
-          className=" text-[14px] leading-6 text-white"
+          className=" text-[14px] leading-6 text-white bg-[#11121A]"
         >
           <Typography variant='body1' className="font-Oxanium"  fontSize={'14px'} fontWeight={400} lineHeight={'24px'} color={"#FFF"}>  {comment} </Typography> 
           <Grid className="flex gap-[16px]  justify-center items-center" >
@@ -169,17 +168,19 @@ const Comments =({profile ,comment }:{profile:any;comment:string})=>{
     const { carouselState: { currentSlide ,totalItems,slidesToShow} } = rest;
     return (
       <Grid className="flex gap-[24px] items-center justify-center mt-[0px]" >
-        <Grid  className="hover:scale-110" component={"button"}   
+        <Grid  className="hover:scale-110 bg-[#11121A]" component={"button"}   
             sx={{ all: "unset" ,cursor:"pointer", "&:focus":{ outline:"none"}  , 
-            width:"48px",height:"48px" ,borderRadius:"140px" , background:"#222326", 
+            width:"48px",height:"48px" ,borderRadius:"140px" ,
             display:"flex" , justifyContent:"center",alignItems:"center" }} 
             disabled ={currentSlide === 0 ? true : false} 
             onClick={() => previous()}
         >
             <ArrowPrev isActive={currentSlide === 0 ? !true : !false} />
         </Grid>
-        <Grid  className="hover:scale-110" component={"button"} 
-          sx={{all: "unset" , cursor:"pointer", "&:focus":{ outline:"none"} ,width:"48px",height:"48px" ,borderRadius:"140px" , background:"#222326", display:"flex" , justifyContent:"center",alignItems:"center" }} 
+        <Grid  className="hover:scale-110 bg-[#11121A]" component={"button"} 
+          sx={{all: "unset" , cursor:"pointer", "&:focus":{ outline:"none"} ,width:"48px",
+          height:"48px" ,borderRadius:"140px" , display:"flex" , 
+          justifyContent:"center",alignItems:"center" }} 
           disabled ={(currentSlide+slidesToShow) === totalItems ? true : false} 
           onClick={() => next()}
           >
@@ -203,12 +204,11 @@ const Comments =({profile ,comment }:{profile:any;comment:string})=>{
 
   const Testimonies = () => {
     return (
-    <Stack className="bg-black  sm:mt-[360px] md:mt-[160px] lg:mt-0  px-[16px] md:px-0" component={"section"}  width={"100%"} justifyContent={"center"} gap={4} paddingY={{xl:"80px" , sm:"80px" , xs:"80px"  }} >
-        <span className="mx-auto text-center sm:pt-[52px] font-Oxanium text-[36px] leading-10 bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >
-          The future of the <br/> metaverse
-        </span>
-      <CarouselWrapper/>
-    </Stack>
+      <Grid className="bg-black p-[26px]" >
+        <Stack className="lg:max-w-[1440px] mx-auto   sm:mt-[360px] md:mt-[160px] lg:mt-0  px-[16px] md:px-0" component={"section"}  width={"100%"} justifyContent={"center"} gap={4}  >
+          <CarouselWrapper/>
+        </Stack>
+      </Grid>
     )
   };
 

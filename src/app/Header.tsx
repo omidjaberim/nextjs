@@ -27,8 +27,9 @@ const Header = (props: IProp) => {
 
   return (
     <Grid
-      className="bg-[url('/footerNoise.png')] bg-auto  w-full flex justify-center items-center  font-Oxanium text-[12px] 
-              lg:text-[14px] text-[#fafafa] leading-8 font-semibold py-[12px] bg-[#131315f6] shadow-black/5 sticky top-0 z-50"
+      className="w-full flex justify-center items-center font-Oxanium text-[12px] 
+              lg:text-[14px] text-[#fafafa] leading-8 font-semibold p-[8px] backdrop-blur-xl backdrop-brightness-150
+               bg-black/80 sticky top-0 z-50"
     >
       <Grid className="flex justify-between w-[calc(100vw)] xl:w-[1440px]">
         <Grid className="w-1/2 md:w-3/4 flex justify-start gap-[2px] md:gap-[7px] xl:gap-[40px]">
@@ -40,7 +41,14 @@ const Header = (props: IProp) => {
             className="sm:flex lg:hidden cursor-pointer mx-2 md:mx-0"
             onClick={() => toggleDrawer(!open)}
           />
-          <Image src={Logo} alt="meta" width={42} height={42} className="ml-1 cursor-pointer" onClick={()=>scrollTo(0,0)} />
+          <Grid onClick={()=>scrollTo(0,0)}  className="flex items-center " >
+          <Image src={Logo} alt="meta" width={42} height={42} className="ml-1 cursor-pointer"  />
+          <span
+              className={`text-[24px] mx-2 md:mr-[58px] cursor-pointer hover:animate-pulse hover:scale-105 transition-all`}              
+            >
+              META-V
+          </span>
+          </Grid>
           <Grid className="text-white sm:hidden lg:flex items-center gap-[2px] md:gap-[22px] xl:gap-[32px]">
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${

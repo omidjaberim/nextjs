@@ -6,51 +6,6 @@ import Image from "next/image"
 import arrowImage from "@/assets/ArrowUp.png"
 import { Grid } from '@mui/material';
 
-
-const Gradient = styled(Box)(({  }) => ({
-  zIndex:0,
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  width: "75%",
-  height: "50%",
-  transform: "translate(-50%, -50%)",
-  flexShrink: "0",
-  borderRadius: "50%",
-  opacity: "0.36",
-  background: "var(--gr3, linear-gradient(93deg, #5659C4 0.48%, #D8A1BC 100%))",
-  filter: "blur(77px)",
-  '&:nth-child(1)': {
-   display:"none"
-  },
-
-  [`@media (max-width: 1440px)`]: {
-    top:"50%",
-    width:"50%",
-    height:"60%",
-  },
-
-  [`@media (max-width: 980px)`]: {
-    top:"50%",
-    width:"50%",
-    height:"80%",
-  },
-  [`@media (max-width: 340px)`]: {
-  top:"8%",
-  left:"0%",  
-  width:"200px",
-  height:"200px",  
-  filter: "blur(47px)",
-  borderRadius: "297px",
-  '&:nth-child(1)': {
-    display:'block',
-    position: 'absolute',
-    top: '100%',
-    left:'110%'
-  },
-  },
-}));
-
 const Title =  styled(Typography)(({})=>({  
   textAlign: "center",
   lineHeight: "44px", 
@@ -71,25 +26,7 @@ const CardStyle = styled(Box)(({})=>({
        border: "1px solid  rgba(255, 255, 255, 0.05)",
        justifyItems:"start", 
 }));
-const Card = ({title,subtitle,points,mt}:{title:string;subtitle:string;points:any[];mt:string})=>{
-    return (
-      <CardStyle 
-          className={`z-10  w-full md:w-[224px] bg-[url('/roadmapNoise.png')] bg-cover bg-[#131315cb] hover:scale-105 transition-all font-Oxanium md:h-[405px] `}
-          sx={{marginTop:{xs:0,xl:mt}}} 
-        >
-        <Grid className="flex gap-[8px] items-stretch">
-            <Image alt='' src={arrowImage} width={20} height={20} className="w-[18px] h-[18px] mt-[5px]" />
-            <Typography className='font-Oxanium' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"32px"}>{title}</Typography>
-        </Grid>
-        <Typography className='font-Oxanium' component={'div'}  color={"#FFF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"32px"}>{subtitle}</Typography>
-        <ol className='pl-[16px] text-[#9A9DAB] text-[16px] leading-7 flex flex-col' >
-        {points.map((point:any,index:number)=>{
-            return <li key={point+index} className='flex justify-start items-baseline' ><div className=' mr-2 rounded-[5px] w-[5px] p-[4px] bg-[#9A9DAB]' ></div> {point}</li>
-        })}   
-        </ol>
-      </CardStyle>
-    )
-} 
+
 
 const roadMapData = [{
     title : "Phase 1",
@@ -118,20 +55,138 @@ const roadMapData = [{
 
 const Roadmap = ()=>{
     return (
-          <Grid id='roadmap'  className='w-full flex flex-col px-4 py-[60px] items-center'  >
-            <Grid  className="w-full  backdrop-blur-xl backdrop-brightness-150 bg-[url('/horizontalLineBg.png'),url('/verticalLineBg.png')] bg-top bg-no-repeat bg-contain" >
+          <Grid id='roadmap'  className='bg-[#000] w-full flex flex-col px-4 py-[60px] items-center'  >
               <div className='mt-[6px] lg:mt-0 w-full  flex flex-col' >
                   <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}  >RoadMap</Title>
-                  <Grid className='w-full flex flex-wrap justify-center gap-5 mt-[29px]' >
-                  {
-                      roadMapData.map((data,index)=>{
-                      return <Card mt={index % 2 ? "280px":"0px" } key={index} title={data.title} subtitle={data.subtitle} points={data.points} />
-                      })
-                  }
+                  <Grid className='w-full flex flex-wrap justify-center gap-10 h-[700px] mt-[29px] relative' >
+                    <Grid 
+                      className={`z-10 px-5   w-[514px] h-[202px] bg-[url('/hexagonal.svg')] bg-no-repeat hover:scale-105 
+                        transition-all font-Oxanium relative lg:absolute lg:top-0 lg:left-[180px] `}          
+                    >
+                      <div className='font-Oxanium text-center absolute py-2 px-20 
+                              bg-[rgb(239,67,93)] top-[-20px] right-[26%] text-white font-bold '>
+                        Foundation
+                      </div>                
+                      <Grid className='w-full flex justify-evenly' >
+                      <div className='w-1/5 text-[rgb(239,67,93)] text-[60px] font-bold px-4 py-14' >
+                          01
+                      </div>  
+                      <ol className='w-4/5 px-6 text-[#9A9DAB] text-[14px] leading-6 flex flex-col py-10' >        
+                        <li  className='flex justify-start items-baseline' >
+                          Market Research & Feasibility Study 
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                          Business Model Development 
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                          Document Preparation & Project Economy
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                          Smart Contract Development - Token, Presale Staking 
+                        </li>            
+                      </ol>
+                      </Grid>
+                    </Grid>
+                    <Grid 
+                      className={`z-10 px-5   w-[514px] h-[202px] bg-[url('/hexagonal.svg')] bg-no-repeat hover:scale-105 
+                        transition-all font-Oxanium relative lg:absolute lg:top-[120px] lg:right-[180px] `}          
+                    >
+                      <div className='font-Oxanium text-center absolute py-2 px-20 
+                              bg-[rgb(0,173,134)] top-[-20px] right-[30%] text-white font-bold '>
+                        Initial
+                      </div>                
+                      <Grid className='w-full flex justify-evenly' >
+                      <div className='w-1/5 text-[rgb(0,173,134)] text-[60px] font-bold px-4 py-14' >
+                          02
+                      </div>  
+                      <ol className='w-4/5 px-6 text-[#9A9DAB] text-[14px] leading-6 flex flex-col py-14' >        
+                        <li  className='flex justify-start items-baseline' >
+                        Token Presale & Community Formation
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                        Dev & Release of Project Demo
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                        Selection of 10 Professions & Presale of First 10 NFTs
+                        </li>                               
+                      </ol>
+                      </Grid>
+                    </Grid>
+                    <Grid 
+                      className={`z-10 px-5   w-[514px] h-[202px] bg-[url('/hexagonal.svg')] bg-no-repeat hover:scale-105 
+                        transition-all font-Oxanium relative lg:absolute lg:top-[240px] lg:left-[180px] `}          
+                    >
+                      <div className='font-Oxanium text-center absolute py-2 px-20 
+                              bg-[rgb(36,177,255)] top-[-20px] right-[26%] text-white font-bold '>
+                        Initial Launch
+                      </div>                
+                      <Grid className='w-full flex justify-evenly' >
+                      <div className='w-1/5 text-[rgb(36,177,255)] text-[60px] font-bold px-4 py-14' >
+                          03
+                      </div>  
+                      <ol className='w-4/5 px-6 text-[#9A9DAB] text-[14px] leading-6 flex flex-col py-16' >        
+                        <li  className='flex justify-start items-baseline' >
+                        First Version Desktop App for 10 Users
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                        Partnerships & Project Development
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                        Token Listing on DEX & CEX
+                        </li>                                
+                      </ol>
+                      </Grid>
+                    </Grid>
+                    <Grid 
+                      className={`z-10 px-5   w-[514px] h-[202px] bg-[url('/hexagonal.svg')] bg-no-repeat hover:scale-105 
+                        transition-all font-Oxanium relative lg:absolute lg:top-[360px] lg:right-[180px] `}          
+                    >
+                      <div className='font-Oxanium text-center absolute py-2 px-20 
+                              bg-[rgb(161,85,185)] top-[-20px] right-[26%] text-white font-bold '>
+                        Expansion
+                      </div>                
+                      <Grid className='w-full flex justify-evenly' >
+                      <div className='w-1/5 text-[rgb(161,85,185)] text-[60px] font-bold px-4 py-14' >
+                          04
+                      </div>  
+                      <ol className='w-4/5 px-6 text-[#9A9DAB] text-[14px] leading-6 flex flex-col py-16' >        
+                        <li  className='flex justify-start items-baseline' >
+                        Expansion of Professions and App Capacity
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                        Release of Mobile App
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                          Document Preparation & Project Economy
+                        </li>                                 
+                      </ol>
+                      </Grid>
+                    </Grid>
+                    <Grid 
+                      className={`z-10 px-5   w-[514px] h-[202px] bg-[url('/hexagonal.svg')] bg-no-repeat hover:scale-105 
+                        transition-all font-Oxanium  relative lg:absolute lg:top-[480px] lg:left-[180px] `}          
+                    >
+                      <div className='font-Oxanium text-center absolute py-2 px-10 
+                              bg-[rgb(255,145,25)] top-[-20px] right-[22%] text-white font-bold '>
+                        Integrating Advanced Tech
+                      </div>                
+                      <Grid className='w-full flex justify-evenly' >
+                      <div className='w-1/5 text-[rgb(255,145,25)] text-[60px] font-bold px-4 py-14' >
+                          05
+                      </div>  
+                      <ol className='w-4/5 px-6 text-[#9A9DAB] text-[14px] leading-6 flex flex-col py-16' >        
+                        <li  className='flex justify-start items-baseline' >
+                        AI Integration Metaverse Governance
+                        </li>
+                        <li  className='flex justify-start items-baseline' >
+                        VR Integration Immersive Metaverse Experience
+                        </li>          
+                      </ol>
+                      </Grid>
+                    </Grid>
                   </Grid>
-              </div>
-            </Grid>
-          </Grid>
+            </div>
+        </Grid>
     )
 }
 
