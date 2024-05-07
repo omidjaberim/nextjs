@@ -2,8 +2,7 @@
 import React from 'react';
 import { Box,  styled } from '@mui/system';
 import { Typography } from '@mui/material';
-import Image from "next/image"
-import arrowImage from "@/assets/ArrowUp.png"
+import CircleIcon from '@mui/icons-material/Circle';
 import { Grid } from '@mui/material';
 
 const Title =  styled(Typography)(({})=>({  
@@ -149,9 +148,9 @@ const Roadmap = ()=>{
                       <div className='w-1/5 text-[rgb(161,85,185)] text-[30px] md:text-[60px] font-bold px-4 py-14' >
                           04
                       </div>  
-                      <ol className='w-4/5 px-6 text-[#9A9DAB] text-[14px] leading-6 flex flex-col py-16' >        
-                        <li  className='flex justify-start items-baseline' >
-                        Expansion of Professions and App Capacity
+                      <ol className='w-4/5 px-6 text-[#9A9DAB]  text-[14px] leading-6 flex flex-col py-16 ' >                              
+                        <li  className='flex justify-start items-baseline  '  >
+                         Expansion of Professions and App Capacity
                         </li>
                         <li  className='flex justify-start items-baseline' >
                         Release of Mobile App

@@ -238,7 +238,7 @@ function PresaleBox() {
         sx={{
           gap: 2,
         }}
-        className="px-[24px] py-[12px] rounded-[26px] bg-[#000000d2] "
+        className="3sm:px-[24px] px-1 py-[12px] rounded-[26px] bg-[#000000d2] "
       >   
         <Grid className="text-[26px] text-white font-Oxanium  font-bold flex  justify-center items-center" >
           <span className="flex  justify-center items-center" >BUY <Title>&nbsp;$MV&nbsp;</Title> TOKEN</span>
@@ -248,7 +248,7 @@ function PresaleBox() {
             justifyContent={"space-between"}
             gap={{ xs: 1, sm: 0 }}
             alignItems={{ xs: "start", md: "center" }}
-            className="font-Oxanium flex-col 3sm:flex-row"
+            className="font-Oxanium flex-col 3sm:flex-row mb-2"
           >
 
             <Typography
@@ -259,17 +259,9 @@ function PresaleBox() {
                 fontWeight: "600",
                 textAlign: "left",
               }}
-              className="flex items-center font-Oxanium text-[20px] md:text-[28px]"
+              className="flex items-center font-Oxanium text-[20px] md:text-[28px] 3sm:mx-1 mx-auto text-[#B28FEE]"
             >
-              
-              <span
-                style={{
-                  color: "#B28FEE",
-                }}
-                className="mx-1"
-              >
                 Stage {Number(currentStage) + 1} / 5
-              </span>
             </Typography>
             <Grid
               sx={{
@@ -282,6 +274,7 @@ function PresaleBox() {
                 gap: { xs: 0, sm: 0.8 },
                 
               }}
+              className="3sm:mx-1 mx-auto"
             >
               <Typography
                 variant="body1"
@@ -292,16 +285,10 @@ function PresaleBox() {
                   fontWeight: "400",
                   textAlign: "center",
                 }}
+                className=" font-bold font-Oxanium"
               >
-                <span
-                  style={{
-                    color: "#B28FEE",
-                  }}
-                  className="font-bold font-Oxanium"
-                >
                   1
-                </span>
-                <span className="mx-1 font-Oxanium font-bold" >$MV</span>
+                <span className="mx-1 font-Oxanium font-bold text-[#B28FEE]" >$MV</span>
                 <span className="text-[#9A9DAB]">=</span>
               </Typography>
               <Typography
@@ -333,7 +320,7 @@ function PresaleBox() {
             justifyContent={"space-between"}
             gap={{ xs: 1, sm: 0 }}
             alignItems="center"
-            className="flex flex-col items-start mt-2 3sm:mt-0 3sm:flex-row"
+            className="flex flex-col items-start mt-2 3sm:mt-0 3sm:flex-row "
           >
             <Grid              
               sx={{
@@ -342,7 +329,7 @@ function PresaleBox() {
                 fontWeight: "400",
                 textAlign: "center",
               }}
-              className="font-Oxanium text-[14px] 3lg:text-[18px] flex w-1/2  "
+              className="font-Oxanium text-[14px] 3lg:text-[18px] flex w-full justify-center 3sm:w-1/2  3sm:mx-1 mx-auto bg-[#352E3E] px-[4px] rounded-lg"
             >
               Next Price &nbsp;
               <span
@@ -356,9 +343,9 @@ function PresaleBox() {
                 alignItems: "center",
                 justifyContent: "center",
                 px: { xs: 0, md: 3 },                
-                py: 1,
+                py: 0,
               }}
-              className="w-1/2 flex justify-start 3sm:justify-end"
+              className="w-full justify-center 3sm:w-1/2 flex   3sm:mx-1 mx-auto bg-[#352E3E] px-[4px] rounded-lg "
             >
               <Grid
                 sx={{
@@ -379,15 +366,10 @@ function PresaleBox() {
                   fontWeight: "400",
                   textAlign: "center",
                 }}
-                className="text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
+                className="text-[#e4acb2] text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
               >
-                <span
-                  style={{
-                    color: "#e4acb2",
-                  }}
-                >
+                
                   $0.03
-                </span>
               </Typography>
             </Grid>
           </Stack>
@@ -538,7 +520,6 @@ function PresaleBox() {
             <Stack
               sx={{
                 background: "#302a38",
-                flexDirection: "row",
                 borderRadius: "12px",
                 justifyContent: "space-around",
                 py: 1,
@@ -546,6 +527,7 @@ function PresaleBox() {
                 gap: 1,
                 width: '100%',
               }}
+              className="2sm:flex-row flex-col"
             >
               {[
                 {

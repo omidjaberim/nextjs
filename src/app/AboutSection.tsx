@@ -33,7 +33,7 @@ const About = ()=>{
                     <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>About META-V</Title>            
                 </div>
             <span className='bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text mx-1 md:mx-3 z-20' >LLC Company</span>
-            <div className={"flex md:hidden  text-center text-[#ced0d6] lg:w-[60%] mt-[35px] px-5 lg:px-0 text-[16px] font-Oxanium leading-7 z-50"}>                 
+            <div className={"flex md:hidden  text-center text-[#ced0d6] lg:w-[60%] mt-[35px] px-5 lg:px-0 text-[16px] font-Oxanium leading-7 z-40"}>                 
             META-V leads the metaverse revolution, offering a groundbreaking virtual world where users interact with computer-generated environments and each other in real time. Integrating blockchain, VR, and AI, META-V creates a fully immersive digital universe.
 
 Users can explore virtual environments, attend events, conduct business, and socialize in a space that blurs the lines between physical and digital. More than entertainment, META-V redefines how we live, work, and interact. Blockchain ensures secure, transparent transactions, while AI governs the platform, establishing rules, resolving disputes, and fostering a trusted, efficient community.
