@@ -7,7 +7,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import Image from "next/image"
 import closeIcon from "@/assets/close.svg"
 import smallLOgo from "@/assets/logo-small.svg"
-import { Grid } from '@mui/material';
+import { Grid, Link } from '@mui/material';
 interface IProp{
     open : boolean;
     toggleDrawer : (v:boolean)=>void;
@@ -36,7 +36,7 @@ const SideMenu = (props:IProp)=>{
                 </ListItem>
                 ))}
             <div key="3" >
-                <span className=' absolute bottom-20 left-[125px] text-white font-semibold font-Oxanium text-[20px]' >Whitepaper</span>
+                <Link href="https://meta-v.gitbook.io/meta-v/" target="_blank" style={{textDecoration:'none'}} className=' absolute bottom-20 left-[125px] text-white font-semibold font-Oxanium text-[20px]' >Whitepaper</Link>
             </div>
             </List>
           </Drawer>

@@ -120,7 +120,7 @@ const PresaleSection = ()=>{
                             <StyledButton>
                               <Link 
                                     className=" text-[#131315] leading-7 font-bold text-[18px] font-Oxanium w-[120px] "  
-                                    href="https://coinsult.net/projects/meta-v/" target="_blank" style={{textDecoration:'none'}}  >
+                                    href="https://meta-v.gitbook.io/meta-v/" target="_blank" style={{textDecoration:'none'}}  >
                                 White Paper
                               </Link>
                             </StyledButton>
