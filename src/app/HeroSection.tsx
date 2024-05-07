@@ -57,7 +57,11 @@ const Hero = () => {
               <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>Blockchain</Typography>
               <div className=' text-[#ced0d6] text-[16px] leading-7 flex flex-col px-[16px]' >            
               <div  className='flex justify-start items-baseline' >
-                In META-V, blockchain is essential for asset ownership, transactions, and governance. Smart contracts secure and automate blockchain transactions. NFTs represent unique digital assets like virtual land, items, and artworks. Blockchain's transparency and immutability foster trust in META-V's economy. The META-V token (MV) facilitates transactions for virtual goods, services, assets, and digital economic activities.
+                In META-V, blockchain is essential for asset ownership, 
+                transactions, and governance. Smart contracts secure and automate blockchain transactions. 
+                NFTs represent unique digital assets like virtual land, items, and artworks. 
+                Blockchain&aposs transparency and immutability foster trust in META-V&aposs economy. 
+                The META-V token (MV) facilitates transactions for virtual goods, services, assets, and digital economic activities.
               </div>
           </div>
         </CardStyle>
