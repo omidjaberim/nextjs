@@ -28,10 +28,10 @@ export default function TimerCountDown() {
       } else {
         setCountDateTime({
           ...countTime,
-          time_days: days,
-          time_Hours: hours,
-          time_Minusts: minuts,
-          time_seconds: seconds,
+          time_days: Number(days),
+          time_Hours: Number(hours),
+          time_Minusts: Number(minuts),
+          time_seconds: Number(seconds),
         });
       }
     }, 1000);
@@ -45,7 +45,6 @@ export default function TimerCountDown() {
         <Grid  
           className="mx-4  rounded-[16px] " display="flex" flexDirection="column" alignItems="center"   >
             <Grid className="text-[28px] font-semibold	 md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >
-              {countTime.time_days > 9 ? "" : 0}
               {countTime.time_days}              
             </Grid>
             <span className="text-[12px] leading-6 font-normal	text-white font-Oxanium">Day</span>          
@@ -53,7 +52,7 @@ export default function TimerCountDown() {
         <Grid  
           className="mx-4  rounded-[16px] text-gradient-to-r from-[#FED3CA] to-[#FFA998]" display="flex" flexDirection="column" alignItems="center"   >
             <Grid className="text-[28px] font-semibold	md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >            
-            {countTime.time_Hours > 9 ? "" : 0}
+        
             {countTime.time_Hours}
             </Grid>
             <span className={"text-[12px]  leading-6 text-white"}>{"Hours"}</span>          
@@ -61,7 +60,7 @@ export default function TimerCountDown() {
         <Grid  
           className="mx-4 rounded-[16px] text-gradient-to-r from-[#FED3CA] to-[#FFA998]" display="flex" flexDirection="column" alignItems="center"   >
             <Grid className="text-[28px] font-semibold	 md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >            
-            {countTime.time_Minusts > 9 ? "" : 0}
+            
             {countTime.time_Minusts}
             </Grid>
             <span className={"text-[12px]  leading-6 text-white"}>{"Minutes"}</span>          
@@ -69,7 +68,7 @@ export default function TimerCountDown() {
         <Grid  
           className="mx-4 rounded-[16px] text-gradient-to-r from-[#FED3CA] to-[#FFA998]" display="flex" flexDirection="column" alignItems="center"   >
             <Grid className="text-[28px] font-semibold	 md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >          
-            {countTime.time_seconds > 9 ? "" : 0}
+            
             {countTime.time_seconds}
             </Grid>
             <span className={"text-[12px]  leading-6 text-white"}>{"Seconds"}</span>          

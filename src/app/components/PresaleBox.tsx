@@ -35,7 +35,7 @@ function PresaleBox() {
   const { account } = useContext(AppContext);
   const { open } = useWeb3Modal();
   const [buyWith, setBuyWith] = useState<string>("USDT");
-  const [endTime, setEndTime] = useState<number | string>(1722628800);
+  const [endTime, setEndTime] = useState<number>(1722628800);
   const [amount, setAmount] = useState<number | string>("");
   const [preSaleEndedStatus, setPresaleEndedStatus] = useState<boolean>(false);
   const [recivedTokens, setreceivedTokens] = useState<number | string>(0);
@@ -233,7 +233,6 @@ function PresaleBox() {
       className="max-w-[620px] font-Oxanium z-20"      
     >
       <ToastNotify alertState={alertState} setAlertState={setAlertState} />
-     
       <Stack
         mt={6}
         sx={{
