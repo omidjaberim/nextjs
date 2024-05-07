@@ -166,7 +166,7 @@ const FaqSection = () => {
           </FaqWrapper>
           </div>
           <div className="flex mb-[150px] lg:mb-0 flex-col w-full lg:w-1/2 items-center lg:flex-row justify-start lg:justify-center" >
-            <Image src="/FAQ.png" alt="" width={440} height={440} className="w-[320px] h-[320px]  " />
+            <Image src="/FAQ.png" alt="" width={340} height={340} className="w-[240px] h-[240px]  " />
           </div>
       </section>
   );

@@ -41,7 +41,7 @@ const [countTime, setCountDateTime] = useState({
   }, []);
 
   return (
-      <Grid className="flex items-center justify-evenly w-full" >       
+      <Grid className="flex items-center justify-evenly w-full font-Oxanium" >       
         <Grid  
           className="mx-4  rounded-[16px] " display="flex" flexDirection="column" alignItems="center"   >
             <Grid className="text-[28px] font-semibold	 md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >

@@ -266,21 +266,16 @@ function PresaleBox() {
             <Grid
               sx={{
                 backgroundColor: "#352E3E",
-                borderRadius: "12px",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: { xs: "space-between", md: "center" },
-                px: { xs: 1.5, md: 3 },
-                gap: { xs: 0, sm: 0.8 },
-                
+                justifyContent: "center",
               }}
-              className="3sm:mx-1 mx-auto"
+              className="3sm:mx-1 mx-auto 3sm:w-[calc(50%-7px)] w-3/4 px-2 rounded-lg"
             >
               <Typography
                 variant="body1"
                 sx={{
                   color: "#EBE9ED",
-                  fontSize: "20px",
                   lineHeight: "26px",
                   fontWeight: "400",
                   textAlign: "center",
@@ -288,19 +283,18 @@ function PresaleBox() {
                 className=" font-bold font-Oxanium"
               >
                   1
-                <span className="mx-1 font-Oxanium font-bold text-[#B28FEE]" >$MV</span>
-                <span className="text-[#9A9DAB]">=</span>
+                <span className="mx-1 font-Oxanium font-bold text-[#B28FEE] text-[16px] 3sm:text-[20px]" >$MV</span>
+                <span className="text-[#9A9DAB]">=</span>&nbsp;
               </Typography>
               <Typography
                 variant="body1"
                 sx={{
                   color: "#EBE9ED",
-                  fontSize: "20px",
                   lineHeight: "32px",
                   fontWeight: "600",
                   textAlign: "center",
                 }}
-                className="font-Oxanium"
+                className="font-Oxanium text-[16px] 3sm:text-[20px]"
               >
                 <span
                   style={{
@@ -329,7 +323,7 @@ function PresaleBox() {
                 fontWeight: "400",
                 textAlign: "center",
               }}
-              className="font-Oxanium text-[14px] 3lg:text-[18px] flex w-full justify-center 3sm:w-1/2  3sm:mx-1 mx-auto bg-[#352E3E] px-[4px] rounded-lg"
+              className="font-Oxanium text-[14px] 3lg:text-[18px] flex w-3/4 justify-center 3sm:w-1/2  3sm:mx-1 mx-auto bg-[#352E3E] px-[4px] rounded-lg"
             >
               Next Price &nbsp;
               <span
@@ -345,7 +339,7 @@ function PresaleBox() {
                 px: { xs: 0, md: 3 },                
                 py: 0,
               }}
-              className="w-full justify-center 3sm:w-1/2 flex   3sm:mx-1 mx-auto bg-[#352E3E] px-[4px] rounded-lg "
+              className="w-3/4 justify-center 3sm:w-1/2 flex  3sm:mx-1 mx-auto bg-[#352E3E] px-[4px] rounded-lg "
             >
               <Grid
                 sx={{
@@ -617,6 +611,7 @@ function PresaleBox() {
                       </InputAdornment>
                     ),
                   }}
+                  className="w-full"
                 />
               </Grid>
             </Stack>
@@ -646,6 +641,7 @@ function PresaleBox() {
                       </InputAdornment>
                     ),
                   }}
+                  className="w-full"
                 />
               </Grid>
             </Stack>

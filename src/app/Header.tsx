@@ -120,7 +120,8 @@ const Header = (props: IProp) => {
             <span className="font-semibold text-[12px] lg:text-[14px] flex ">
               {account
                 ? account.slice(0, 4) + "..." + account.slice(-4)
-                : "Connect Wallet"}
+                : "Connect"  
+                }
             </span>
           </StyledButton>
         </Grid>
