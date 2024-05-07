@@ -91,7 +91,7 @@ const SocialSection = () => {
             <span className="text-[#9A9DAB] text-[13px] leading-7" >contact@meta-v.io</span>
             <div className="flex justify-around">
             {socialShare.map((platform, index) => (
-              <Grid width={"24px"} height={"24px"} key={index}  >
+              <Grid width={"24px"} height={"24px"} key={index} className="mx-2"  >
               <Link href={platform.link} target="_blank">
                 <Grid  width={"100%"} height={"100%"}>
                   <Image alt="" src={platform.image} className="hover:scale-110" />
@@ -111,7 +111,7 @@ const Footer = (props:any) => {
   return (
       <Container className="flex flex-col justify-center items-center w-full backdrop-blur-xl backdrop-brightness-150
       bg-black/80" margin={"auto"}>
-        <div className=" h-full py-[32px] px-[80px] w-[calc(100vw)] xl:w-[1440px]" >
+        <div className=" h-full py-[32px] px-[80px] w-[calc(100vw)] xl:max-w-[1440px]" >
           <Grid
             display={"flex"}
             width={"100%"}

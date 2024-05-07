@@ -57,7 +57,7 @@ const Roadmap = ()=>{
     return (
           <Grid id='roadmap'  className='bg-[#000] w-full flex flex-col px-4 py-[60px] items-center'  >
               <div className='mt-[6px] lg:mt-0 w-full  flex flex-col' >
-                  <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[12px]"}  >RoadMap</Title>
+                  <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium mt-[12px] mb-[55px]"}  >RoadMap</Title>
                   <Grid className='w-full xl:w-[1320px] flex flex-wrap justify-center mx-auto gap-10 md:h-[1360px] 2lg:h-[700px] mt-[29px] relative' >
                     <Grid 
                       className={`z-10 px-5 w-full  md:w-[514px] md:h-[202px]  bg-[#11121A] md:bg-[#000] 2lg:bg-transparent md:bg-[url('/hexagonal.svg')] bg-no-repeat md:bg-cover hover:scale-105 
@@ -138,7 +138,7 @@ const Roadmap = ()=>{
                       </Grid>
                     </Grid>
                     <Grid 
-                      className={`w-full z-10 px-5 md:w-[514px] md:h-[202px]  bg-[#11121A] md:bg-[#000] xl:bg-transparent md:bg-[url('/hexagonal.svg')] bg-no-repeat md:bg-coverhover:scale-105 
+                      className={`w-full z-10 px-5 md:w-[514px] md:h-[202px]  bg-[#11121A] md:bg-[#000] xl:bg-transparent md:bg-[url('/hexagonal.svg')] bg-no-repeat md:bg-cover hover:scale-105 
                         transition-all font-Oxanium relative xl:absolute xl:top-[360px] xl:right-[180px] `}          
                     >
                       <div className='font-Oxanium text-center absolute py-2 px-20 

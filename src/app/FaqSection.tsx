@@ -149,7 +149,7 @@ const FaqSection = () => {
   return (
       <section id="FAQ"  className="lg:max-w-[1440px] mx-auto flex justify-center flex-col lg:flex-row lg:justify-between  bg-[#11121A] w-full font-Oxanium p-[28px]" >        
         <div className="flex flex-col justify-center w-full lg:w-1/2" >
-        <GradientText className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>
+        <GradientText className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium mt-[2px] mb-[25px]"}>
           FAQ
         </GradientText>        
           <FaqWrapper zIndex={1} className="mb-[144px] font-Oxanium mx-auto mt-[28px]">

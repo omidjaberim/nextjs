@@ -48,7 +48,7 @@ const PresaleSection = ()=>{
               <Image src="/Ellipse02.svg" alt="" width={350} height={140} className="blur-xl absolute top-[16%] right-[60%]" />
               <Image src="/Ellipse01.svg" alt="" width={340} height={140} className="blur-xl absolute top-[12%] right-[24%]" />
               <Image src="/Ellipse03.svg" alt="" width={270} height={140} className="blur-xl absolute top-[10%] left-[12%]" />
-              <Image src="/girl2.png" alt="" width={410} height={140} className="absolute top-0 right-[40%]" />              
+              <Image src="/girl2.png" alt="" width={420} height={140} className="absolute top-0 right-[40%]" />              
               <Grid className="w-full relative px-[16px] md:px-0"  >            
                 <div                
                   className="w-full font-Roboto flex flex-col lg:flex-row justify-center lg:justify-between  

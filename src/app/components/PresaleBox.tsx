@@ -16,7 +16,6 @@ import {
   StyledInput,
   ToastNotify,
 } from "./SmallComponents/AppComponents";
-import TimerCountDown from "./SmallComponents/Timer";
 import { preSaleAddress } from "context/environment";
 import { AppContext } from "context/utils";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
@@ -247,11 +246,10 @@ function PresaleBox() {
         </Grid>           
         <Grid className="bg-[#11121A] rounded-2xl  p-[24px]" >         
           <Stack
-            flexDirection="row"
             justifyContent={"space-between"}
             gap={{ xs: 1, sm: 0 }}
             alignItems={{ xs: "start", md: "center" }}
-            className="font-Oxanium"
+            className="font-Oxanium flex-col 3sm:flex-row"
           >
 
             <Typography
@@ -271,7 +269,7 @@ function PresaleBox() {
                 }}
                 className="mx-1"
               >
-                Stage {Number(currentStage) + 1}
+                Stage {Number(currentStage) + 1} / 5
               </span>
             </Typography>
             <Grid
@@ -333,10 +331,10 @@ function PresaleBox() {
             </Grid>
           </Stack>
           <Stack
-            flexDirection="row"
             justifyContent={"space-between"}
             gap={{ xs: 1, sm: 0 }}
             alignItems="center"
+            className="flex flex-col items-start mt-2 3sm:mt-0 3sm:flex-row"
           >
             <Grid              
               sx={{
@@ -358,23 +356,22 @@ function PresaleBox() {
               sx={{               
                 alignItems: "center",
                 justifyContent: "center",
-                px: { xs: 1.5, md: 3 },                
+                px: { xs: 0, md: 3 },                
                 py: 1,
               }}
-              className="w-1/2 flex justify-end"
+              className="w-1/2 flex justify-start 3sm:justify-end"
             >
-              <Typography
-                variant="body1"
+              <Grid
                 sx={{
                   color: "#EBE9ED",
                   lineHeight: "32px",
                   fontWeight: "400",
                   textAlign: "center",
                 }}
-                className="font-Oxanium text-[14px] 3lg:text-[18px]"
+                className="font-Oxanium text-[14px] 3lg:text-[18px] "
               >
                 Listing Price &nbsp;
-              </Typography>
+              </Grid>
               <Typography
                 variant="body1"
                 sx={{
@@ -576,7 +573,7 @@ function PresaleBox() {
                     alignItems: "center",                  
                     borderRadius: "8px",
                     py: { xs: 1, sm: 0.4 },
-                    px: { xs: 1.8, md: 1.8 },
+                    px: { xs: 1.2, md: 1.8 },
                     width: "100%",
                     background: buyWith === text ? "#514e57" : "transparent",
                     transition: "all .5s",
@@ -630,7 +627,7 @@ function PresaleBox() {
                               : usdcIcon.src
                           }
                           sx={{
-                            width: "24px",
+                            width: "26px",
                             marginRight: { xs: "6px", md: "20px" },
                             marginLeft: { xs: "-10px", md: "0px" },
                             marginTop: { xs: "-3px", sm: "-3px" },
@@ -659,7 +656,7 @@ function PresaleBox() {
                           alt="logo"
                           src={logoN.src}
                           sx={{
-                            width: "24px",
+                            width: "28px",
                             marginRight: { xs: "6px", md: "20px" },
                             marginLeft: { xs: "-10px", md: "0px" },
                             marginTop: { xs: "-3px", sm: "-3px" },
@@ -678,7 +675,11 @@ function PresaleBox() {
               disabled={loading}
               onClick={async () => (account ? buyHandler() : await open())}
             >
-              {loading ? "Processing..." : account ? "Buy" : "Connect"}
+              
+              {loading ? <span className="font-bold text-oxanium text-[22px]" >Processing...</span>  : account ? 
+              <span className="font-bold text-oxanium text-[32px]" >Buy</span>:
+              <span className="font-bold text-oxanium text-[22px]" >Connect</span>}
+              
             </StyledButton>
           </Stack>
           {account && (

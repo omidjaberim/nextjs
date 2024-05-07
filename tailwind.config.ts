@@ -13,6 +13,7 @@ const config: Config = {
       'sm': '314px',
       // => @media (min-width: 344px) { ... }
       '2sm': '414px',
+      '3sm': '444px',
       'md': '640px',
       // => @media (min-width: 640px) { ... }
       'lg': '900px',
@@ -23,6 +24,7 @@ const config: Config = {
       '2lg': '1099px',
       // => @media (min-width: 1440px) { ... }
       'xl': '1180px',
+      'txl': '1324px',
       // => @media (min-width: 1440px) { ... }
       '2xl': '1480px',
       // => @media (min-width: 1440px) { ... }
