@@ -41,11 +41,12 @@ const FAQ = ({ question, answer, expanded, handleChange, index }:{question:strin
           background: "#131315cb",
           backdropFilter: "blur(16px)",
         }}
-        className="rounded-xl z-10 bg-[url('/roadmapNoise.png')] bg-cover "
+        className="rounded-xl z-10"
       >
         <AccordionSummary
           sx={{ width: "100%" }}
           expandIcon={<ExpandPlusMinus isExpanded={index === expanded} />}
+          className="rounded-t-lg bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% "
         >
           <Typography
             sx={{
@@ -63,7 +64,9 @@ const FAQ = ({ question, answer, expanded, handleChange, index }:{question:strin
             {question}
           </Typography>
         </AccordionSummary>
-        <AccordionDetails sx={{ borderRadius: 0 }}>
+        <AccordionDetails 
+          className="bg-gradient-to-r from-[#1b1d2c] from-30% via-[#282c42] via-50% to-[#2a2d3f] rounded-b-lg"
+          sx={{ borderRadius: 0 }}>
           <Typography
             sx={{
               color: "#9A9DAB",
@@ -72,7 +75,7 @@ const FAQ = ({ question, answer, expanded, handleChange, index }:{question:strin
               fontWeight: "400",
               lineHeight: "24px",
             }}
-            className="font-Oxanium"
+            className="font-Oxanium "
           >
             {answer}
           </Typography>
@@ -81,57 +84,17 @@ const FAQ = ({ question, answer, expanded, handleChange, index }:{question:strin
   );
 };
 
-const FaqWrapper = styled(Box)(({ theme }) => ({
+const FaqWrapper = styled(Box)(( ) => ({
   display: "flex",
   flexDirection: "column",
   gap: "20px",
   padding: "0 0", 
-  justifyContent: "flex-start",
+  justifyContent: "flex-center",
   flex: 1,
-
-  alignItems: "flex-start",
-  [`@media (max-width: ${theme.breakpoints.values.md}px)`]: {
-    alignItems:"center",
-  },
-  [`@media (max-width: ${theme.breakpoints.values.sm}px)`]: {
-    width: "unset",
-    padding: "0",
-  },
+  alignItems: "flex-center",
+ 
 }));
 
-const Container = styled(Box)(({ theme }) => ({
-  overflow: "hidden",
-  position: "relative",
-  display: "flex",
-  paddingTop: "80px", 
-  flexDirection: "column",
-  alignItems: "flex-start",
-  gap: "64px",
-  alignSelf: "stretch",
-  minHeight: "max-content",
-  backgroundSize: "contain",
-  backgroundRepeat: "repeat",
-  backgroundImage: `url(${gridLine})`,
-
-  [`@media (max-width: ${theme.breakpoints.values.lg}px)`]: {
-  },
-
-  [`@media (max-width: ${theme.breakpoints.values.md}px)`]: {
-
-    minHeight: "max-content",
-    justifyContent: "space-between",
-    height: "max-content",
-    gap: "32px",
-    padding: "32px 32px",
-    
-  },
-  [`@media (max-width: ${theme.breakpoints.values.sm}px)`]: {
-    minHeight: "667px",
-    justifyContent: "space-between",
-    gap: "32px",
-    padding: "24px 16px",
-  },
-}));
 
 const GradientText = styled(Typography)(({  }) => ({
   textAlign: "center",
@@ -153,49 +116,6 @@ const GradientText = styled(Typography)(({  }) => ({
   },
 }));
 
-const Gradient = styled(Box)(({  }) => ({
-  zIndex:0,
-  position: "absolute",
-  top: "110%",
-  left: "100%",
-  width: "100%",
-  height: "180%",
-  transform: "translate(-50%, -50%)",
-  flexShrink: "0",
-  borderRadius: "50%",
-  opacity: "0.36",
-  background: "var(--gr3, linear-gradient(93deg, #5659C4 0.48%, #D8A1BC 100%))",
-  filter: "blur(77px)",
-  '&:nth-child(1)': {
-   display:"none"
-  },
-
-  [`@media (max-width: 1440px)`]: {
-    top:"50%",
-    width:"50%",
-    height:"60%",
-  },
-
-  [`@media (max-width: 820px)`]: {
-    top:"50%",
-    width:"50%",
-    height:"80%",
-  },
-  [`@media (max-width: 344px)`]: {
-  top:"8%",
-  left:"0%",  
-  width:"200px",
-  height:"200px",  
-  filter: "blur(47px)",
-  borderRadius: "297px",
-  '&:nth-child(1)': {
-    display:'block',
-    position: 'absolute',
-    top: '100%',
-    left:'110%'
-  },
-  },
-}));
 
 const sampleFaqs = [
   {
@@ -227,15 +147,12 @@ const FaqSection = () => {
   };
 
   return (
-      <Container id="FAQ"  margin={"auto"} component={"section"} className="bg-[#11121A] w-full font-Oxanium px-[28px] " >        
+      <section id="FAQ"  className="lg:max-w-[1440px] mx-auto flex justify-center flex-col lg:flex-row lg:justify-between  bg-[#11121A] w-full font-Oxanium p-[28px]" >        
+        <div className="flex flex-col justify-center w-full lg:w-1/2" >
         <GradientText className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>
           FAQ
         </GradientText>        
-        <Grid 
-          className="flex w-full flex-1 sm:flex-col md:flex-row mt-[29px] lg:max-w-[1440px] mx-auto"
-        >
-          <div className="md:w-full lg:w-1/2">
-          <FaqWrapper zIndex={1} className="mb-[144px] font-Oxanium ">
+          <FaqWrapper zIndex={1} className="mb-[144px] font-Oxanium mx-auto mt-[28px]">
             {sampleFaqs.map((faq, index) => (
               <FAQ
                 key={faq.question}
@@ -243,15 +160,15 @@ const FaqSection = () => {
                 index={index}
                 handleChange={handleChange}
                 
-                {...faq}
-                
-                
+                {...faq}                                
               ></FAQ>
             ))}             
           </FaqWrapper>
           </div>
-        </Grid>
-      </Container>
+          <div className="flex mb-[150px] lg:mb-0 flex-col w-full lg:w-1/2 items-center lg:flex-row justify-start lg:justify-center" >
+            <Image src="/FAQ.png" alt="" width={440} height={440} className="w-[320px] h-[320px]  " />
+          </div>
+      </section>
   );
 };
 

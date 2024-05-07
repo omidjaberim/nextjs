@@ -29,14 +29,16 @@ const Hero = () => {
 
 
   return (
-    <Grid id='Technology'  className='bg-[#11121A] w-full flex flex-col px-4 py-[60px] items-center'  >
+    <Grid id='Technology'  className='bg-[#000] w-full flex flex-col px-4 py-[60px] items-center'  >
       <div className='mt-[6px] lg:mt-0 w-full  flex flex-col max-w-[1440px]' >
-        <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}  >Technological Foundations of META-V</Title>
+        <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}  >Technological Foundations</Title>
         <Grid className='w-full flex  flex-wrap justify-center gap-5 mt-[29px]' >
         <CardStyle 
-            className={`z-10  w-full md:w-[424px] bg-[#000] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}            
+            className={`z-10  w-full md:w-[424px] bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}            
           >
+              <div className="w-full bg-black rounded-lg" >
               <Image src="/vrf.jpg" alt="" width={157} height={160}  className="mx-auto" />
+              </div>
               <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>
                 Virtual Reality (VR)
               </Typography>
@@ -47,10 +49,11 @@ const Hero = () => {
           </div>
         </CardStyle>
         <CardStyle 
-            className={`z-10  w-full md:w-[424px]  bg-[#000] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}
+            className={`z-10  w-full md:w-[424px]  bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}
             
-          >
+          ><div className="w-full bg-black rounded-lg" >
               <Image src="/aif.jpg" alt="" width={385} height={160}  className="mx-auto" />
+              </div>
               <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>Blockchain</Typography>
               <div className=' text-[#9A9DAB] text-[16px] leading-7 flex flex-col px-[16px]' >            
               <div  className='flex justify-start items-baseline' >
@@ -59,10 +62,11 @@ const Hero = () => {
           </div>
         </CardStyle>
         <CardStyle 
-            className={`z-10  w-full md:w-[424px]  bg-[#000] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}
+            className={`z-10  w-full md:w-[424px]  bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}
             
-          >
+          ><div className="w-full bg-black rounded-lg" >
             <Image src="/bcf.jpg" alt="" width={262} height={330}  className="mx-auto" />
+            </div>
             <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>Artificial Intelligence (AI)</Typography>          
             <div className=' text-[#9A9DAB] text-[16px] leading-7 flex flex-col px-[16px]' >            
               <div  className='flex justify-start items-baseline' >

@@ -33,7 +33,6 @@ export function ToastNotify({
 
 export function StyledButton({ children, ...props }: { children: any;[x:string]:any }) {
   return (
-    <>
       <Button
         {...props}
         sx={{
@@ -44,7 +43,6 @@ export function StyledButton({ children, ...props }: { children: any;[x:string]:
           textTransform: "capitalize",
           borderRadius: "12px",
           fontWeight: "600",
-          width: props.width,
           "&.Mui-disabled": {
             color: "#979EA7",
           },
@@ -57,7 +55,6 @@ export function StyledButton({ children, ...props }: { children: any;[x:string]:
       >
         {children}
       </Button>
-    </>
   );
 }
 
@@ -112,8 +109,7 @@ export const StyledInput = ({
   const [active, setActive] = useState(false);
   return (
     <Grid
-      sx={{
-        height: "60px",
+      sx={{        
         borderRadius: "12px",
       }}
     >
@@ -124,7 +120,6 @@ export const StyledInput = ({
         sx={{
           background: "#2a2730",
           borderRadius: "inherit",
-          width: "100%",
           "& .MuiOutlinedInput-root": {
             borderRadius: "inherit",
             pr: 0.6,
@@ -159,7 +154,7 @@ export const StyledInput = ({
             fontSize: "20px",
             fontWeight: "600",
             fontFamily: "Oxanium",
-            lineHeight: "32px",
+            lineHeight: "16px",
           },
         }}
       />

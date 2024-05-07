@@ -16,12 +16,13 @@ const Title =  styled(Typography)(({})=>({
 
 const About = ()=>{
   return (
-    <section id='about' className={"w-full flex flex-col items-center bg-[#000] font-Oxanium pt-[62px]  "}  > 
+    <section id='about' className={"w-full flex flex-col items-center bg-[#11121A] font-Oxanium pt-[62px]  "}  > 
         <div className=' max-w-[1440px] relative' >   
             <div className=' flex lg:flex-row lg:justify-between items-center  mx-auto flex-col  '>  
             <div className='flex flex-col items-center w-full h-[600px]' >
-                    <Image src="/Ellipse02.svg" alt="" width={350} height={140} className="blur-xl absolute top-[16%] left-20 z-10" />                    
-                    <Image src="/Ellipse01.svg" alt="" width={270} height={140} className="blur-xl absolute top-[29%] right-20 z-10" />
+                    <Image src="/Ellipse02.svg" alt="" width={350} height={140} className="blur-xl absolute top-[20%] left-[10%] z-10" />                    
+                    <Image src="/Ellipse03.svg" alt="" width={350} height={140} className="blur-xl absolute top-[30%] left-[15%] z-10" />                    
+                    <Image src="/Ellipse01.svg" alt="" width={270} height={140} className="blur-xl absolute top-[45%] left-[20%] z-10" />
                 <div className={"w-full flex justify-center items-center mt-[10px] z-20"} >
                     <img src={aboutImage.src} className="w-[108.097px] h-[34px] mr-[4px] md:w-[90.097px] md:h-[24px] md:mx-[4px]" alt="about"/>
                     <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>META-V</Title>            
@@ -39,7 +40,7 @@ Users can explore virtual environments, attend events, conduct business, and soc
 Users can explore virtual environments, attend events, conduct business, and socialize in a space that blurs the lines between physical and digital. More than entertainment, META-V redefines how we live, work, and interact. Blockchain ensures secure, transparent transactions, while AI governs the platform, establishing rules, resolving disputes, and fostering a trusted, efficient community.
             </div>
             </div>
-                <Image src="/p2.gif" alt="" width={470} height={470} className='w-[570px] h-[570px] absolute top-[30px] left-[29%]  z-0'  />  
+                
           </div>          
         </div>
     </section>

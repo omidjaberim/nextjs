@@ -8,6 +8,7 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { styled } from '@mui/system';
 import React, { useContext, useEffect, useState } from "react";
 import { bnbIcon, usdcIcon, usdtIcon, logoN } from "./SmallComponents/Images";
 import {
@@ -219,10 +220,18 @@ function PresaleBox() {
     const newValue = input?.replace(/[^0-9.]/g, "");
     setAmount(newValue);
   };
+
+  const Title =  styled(Grid)(({})=>({  
+    background: 'linear-gradient(93deg, #ACA7FF 16.47%, #FED6FF 49.36%, #D7A3A9 81.61%)',
+    WebkitBackgroundClip:'text',
+    WebkitTextFillColor:'transparent',
+    backgroundClip:'text',
+    })  
+  )
   return (
     <Grid
-      width={{ xs: "100%", md: "max-content" }}
-      className="max-w-[520px] font-Oxanium z-20"      
+      width="100%" 
+      className="max-w-[620px] font-Oxanium z-20"      
     >
       <ToastNotify alertState={alertState} setAlertState={setAlertState} />
      
@@ -231,16 +240,14 @@ function PresaleBox() {
         sx={{
           gap: 2,
         }}
-        className="px-[24px] py-[20px] rounded-[26px] bg-[#000000d2] "
+        className="px-[24px] py-[12px] rounded-[26px] bg-[#000000d2] "
       >   
-        <Grid className="text-[32px] text-white font-Oxanium text-center font-bold" >
-          <span>BUY MV TOKEN</span>
-        </Grid>    
-       
-        <Grid className="bg-[#11121A] rounded-2xl  p-[24px]" > 
-        
+        <Grid className="text-[26px] text-white font-Oxanium  font-bold flex  justify-center items-center" >
+          <span className="flex  justify-center items-center" >BUY <Title>&nbsp;$MV&nbsp;</Title> TOKEN</span>
+        </Grid>           
+        <Grid className="bg-[#11121A] rounded-2xl  p-[24px]" >         
           <Stack
-            flexDirection={{ xs: "column", md: "row" }}
+            flexDirection="row"
             justifyContent={"space-between"}
             gap={{ xs: 1, sm: 0 }}
             alignItems={{ xs: "start", md: "center" }}
@@ -271,7 +278,6 @@ function PresaleBox() {
               sx={{
                 backgroundColor: "#352E3E",
                 borderRadius: "12px",
-                width: { xs: "100%", md: "fit-content" },
                 display: "flex",
                 alignItems: "center",
                 justifyContent: { xs: "space-between", md: "center" },
@@ -327,67 +333,47 @@ function PresaleBox() {
             </Grid>
           </Stack>
           <Stack
-            flexDirection={{ xs: "column", md: "row" }}
+            flexDirection="row"
             justifyContent={"space-between"}
             gap={{ xs: 1, sm: 0 }}
-            alignItems={{ xs: "start", md: "center" }}
+            alignItems="center"
           >
-            <Typography
-              variant="h1"
+            <Grid              
               sx={{
                 color: "#EBE9ED",
-                fontSize: "18px",
                 lineHeight: "32px",
                 fontWeight: "400",
                 textAlign: "center",
               }}
-              className="font-Oxanium"
+              className="font-Oxanium text-[14px] 3lg:text-[18px] flex w-1/2  "
             >
-              Next Price <span className="text-[#9A9DAB] mx-1">=</span>
-              <Typography
-                variant="body1"
-                sx={{
-                  fontSize: "18px",
-                  lineHeight: "32px",
-                  fontWeight: "400",
-                  textAlign: "center",
-                }}
-                className="bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
-              >
-                <span
-                  style={{
-                    color: "#e4acb2",
-                  }}
-                >
+              Next Price &nbsp;
+              <span
+                className="text-[#e4acb2] text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
+              >                
                   $0.0120
-                </span>
-              </Typography>
-            </Typography>
+              </span>
+            </Grid>
             <Grid
-              sx={{
-                backgroundColor: { xs: "#352E3E", md: "transparent" },
-                borderRadius: "12px",
-                width: { xs: "100%", md: "fit-content" },
-                display: "flex",
+              sx={{               
                 alignItems: "center",
-                justifyContent: { xs: "space-between", md: "center" },
-                px: { xs: 1.5, md: 3 },
-                gap: { xs: 0, sm: 0.8 },
+                justifyContent: "center",
+                px: { xs: 1.5, md: 3 },                
                 py: 1,
               }}
+              className="w-1/2 flex justify-end"
             >
               <Typography
                 variant="body1"
                 sx={{
                   color: "#EBE9ED",
-                  fontSize: "18px",
                   lineHeight: "32px",
                   fontWeight: "400",
                   textAlign: "center",
                 }}
-                className="font-Oxanium"
+                className="font-Oxanium text-[14px] 3lg:text-[18px]"
               >
-                Listing Price <span className="text-[#9A9DAB] mx-1">=</span>
+                Listing Price &nbsp;
               </Typography>
               <Typography
                 variant="body1"
@@ -397,7 +383,7 @@ function PresaleBox() {
                   fontWeight: "400",
                   textAlign: "center",
                 }}
-                className="bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
+                className="text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
               >
                 <span
                   style={{
@@ -495,7 +481,7 @@ function PresaleBox() {
                 >
                   {toLocalFormat(totalSoldTokens)}
                 </span>{" "}
-                {<br />}/ <span className="text-[20px]" >200,000,000</span>
+                {<br />}/ <span className="text-[20px] font-Oxanium" >200,000,000</span>
               </Typography>
             </Stack>
             <Stack gap={1}>
@@ -530,12 +516,12 @@ function PresaleBox() {
                 >
                   ${toLocalFormat(amountRaisedForAll)}
                 </span>{" "}
-                { <br />} /<span className="text-[20px]" > 3,600,000 </span>
+                { <br />} /<span className="text-[20px] font-Oxanium" > 3,600,000 </span>
               </Typography>
             </Stack>
           </Stack>
         </Grid>
-        <Grid className="bg-[#11121A] rounded-2xl  p-[24px]" > 
+        <Grid className="bg-[#11121A] rounded-2xl  px-[24px] py-[15px]" > 
           <Stack
             flexWrap={"wrap"}
             justifyContent={"space-between"}
@@ -706,6 +692,7 @@ function PresaleBox() {
                   fontWeight: "400",
                   textAlign: "center",
                 }}
+                className="font-Oxanium"
               >
                 Your Balance :{" "}
                 <span

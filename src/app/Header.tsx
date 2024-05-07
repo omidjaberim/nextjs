@@ -1,4 +1,4 @@
-import { Grid, Link } from "@mui/material";
+import { Grid } from "@mui/material";
 import Image from "next/image";
 import Logo from "@/assets/logo.png";
 import HamMenu from "@/assets/menu.svg";
@@ -38,18 +38,18 @@ const Header = (props: IProp) => {
             alt="meta"
             width={24}
             height={24}
-            className="sm:flex lg:hidden cursor-pointer mx-2 md:mx-0"
+            className="sm:flex xlg:hidden cursor-pointer mx-2 md:mx-0"
             onClick={() => toggleDrawer(!open)}
           />
           <Grid onClick={()=>scrollTo(0,0)}  className="flex items-center " >
           <Image src={Logo} alt="meta" width={42} height={42} className="ml-1 cursor-pointer"  />
           <span
-              className={`text-[24px] mx-2 md:mr-[58px] cursor-pointer hover:animate-pulse hover:scale-105 transition-all`}              
+              className={`2sm:flex hidden text-[24px] mx-2 md:mr-[58px] cursor-pointer hover:animate-pulse hover:scale-105 transition-all`}              
             >
               META-V
           </span>
           </Grid>
-          <Grid className="text-white sm:hidden lg:flex items-center gap-[2px] md:gap-[22px] xl:gap-[32px]">
+          <Grid className="text-white sm:hidden xlg:flex items-center gap-[2px] md:gap-[22px] xl:gap-[32px]">
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${
                 selectedItem === "meta" ? " scale-105 text-[#B887FF]" : ""
@@ -99,7 +99,7 @@ const Header = (props: IProp) => {
               FAQ
             </span>
           </Grid>
-          <Grid className="sm:flex lg:hidden">
+          <Grid className="sm:flex xlg:hidden">
             <SideMenu
               selectedItem={selectedItem}
               scrollToId={scrollToId}
@@ -108,10 +108,10 @@ const Header = (props: IProp) => {
             />
           </Grid>
         </Grid>
-        <Grid className="w-1/2 md:w-1/4 flex items-center justify-end gap-[4px] xl:gap-[16px] px-2">
+        <Grid className="w-1/2 md:w-1/4 flex items-center justify-end gap-[8px] xl:gap-[16px] px-2">
           <a
             href="https://meta-v.gitbook.io/meta-v/"
-            className="hidden xl:flex cursor-pointer"
+            className="flex cursor-pointer"
             target="_blank"
           >
             Whitepaper

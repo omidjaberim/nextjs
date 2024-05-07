@@ -205,7 +205,7 @@ const Comments =({profile ,comment }:{profile:any;comment:string})=>{
   const Testimonies = () => {
     return (
       <Grid className="bg-black p-[26px]" >
-        <Stack className="lg:max-w-[1440px] mx-auto   sm:mt-[360px] md:mt-[160px] lg:mt-0  px-[16px] md:px-0" component={"section"}  width={"100%"} justifyContent={"center"} gap={4}  >
+        <Stack className="lg:max-w-[1440px] mx-auto mt-0  px-[16px] md:px-0" component={"section"}  width={"100%"} justifyContent={"center"} gap={4}  >
           <CarouselWrapper/>
         </Stack>
       </Grid>

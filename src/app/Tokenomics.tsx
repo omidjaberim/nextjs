@@ -74,58 +74,10 @@ const tokenShareData = [
 ]
 const Tokenomics = ()=>{
     return(
-        <Container id="tokenomics" className="bg-[#000]  flex flex-col py-[72px] " >
+        <Container id="tokenomics" className="bg-[#11121A]  flex flex-col py-[72px] " >
            <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"} >Tokenomics</Title>
             <Grid className='flex justify-center relative w-full' >
-                <Image src='/circle.jpg' alt="" width={350} height={350} />
-                <Grid className='absolute top-0 right-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >26%</span>
-                    <span className='p-1 px-3' >Ecosystem</span>
-                </Grid>
-                <Grid className='absolute top-10 right-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >4%</span>
-                    <span className='p-1 px-3' >Community</span>
-                </Grid>
-                <Grid className='absolute top-20 right-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >5%</span>
-                    <span className='p-1 px-3' >Reserve</span>
-                </Grid>
-                <Grid className='absolute top-[100px] right-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >4%</span>
-                    <span className='p-1 px-3' >Advisors</span>
-                </Grid>
-                <Grid className='absolute top-[130px] right-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >8%</span>
-                    <span className='p-1 px-3' >Staking</span>
-                </Grid>
-                <Grid className='absolute top-[160px] right-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >7%</span>
-                    <span className='p-1 px-3' >Development</span>
-                </Grid>
-                <Grid className='absolute top-[190px] right-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >10%</span>
-                    <span className='p-1 px-3' >Marketing</span>
-                </Grid>
-                <Grid className='absolute top-0 left-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >10%</span>
-                    <span className='p-1 px-3' >Team</span>
-                </Grid>
-                <Grid className='absolute top-10 left-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >10%</span>
-                    <span className='p-1 px-3' >Liquidity</span>
-                </Grid>
-                <Grid className='absolute top-20 left-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >2%</span>
-                    <span className='p-1 px-3' >Private Sale</span>
-                </Grid>
-                <Grid className='absolute top-[160px] left-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >10%</span>
-                    <span className='p-1 px-3' >Presale</span>
-                </Grid>
-                <Grid className='absolute top-[190px] left-[256px] font-bold py-1 rounded-xl text-black bg-[#fff] z-10 border-1 border-silver' >
-                    <span className='border-r p-1 pl-3 pr-1 border-r-1 border-silver' >4%</span>
-                    <span className='p-1 px-3' >Public Sale</span>
-                </Grid>                
+                <Image src='/tokenomics.png' alt="" width={880} height={850} />
             </Grid>
         </Container>
     )

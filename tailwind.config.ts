@@ -12,11 +12,19 @@ const config: Config = {
     screens: {
       'sm': '314px',
       // => @media (min-width: 344px) { ... }
+      '2sm': '414px',
       'md': '640px',
       // => @media (min-width: 640px) { ... }
-      'lg': '890px',
+      'lg': '900px',
       // => @media (min-width: 980px) { ... }
-      'xl': '1440px',
+      '3lg': '1006px',
+      'xlg': '960px',
+      // => @media (min-width: 980px) { ... }
+      '2lg': '1099px',
+      // => @media (min-width: 1440px) { ... }
+      'xl': '1180px',
+      // => @media (min-width: 1440px) { ... }
+      '2xl': '1480px',
       // => @media (min-width: 1440px) { ... }
     },    
     extend: {

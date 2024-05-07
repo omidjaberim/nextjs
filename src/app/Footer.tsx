@@ -109,7 +109,8 @@ const SocialSection = () => {
 const Footer = (props:any) => {
   const {scrollToId} = props;
   return (
-      <Container className="bg-[url('/footerNoise.png')] bg-repeat bg-auto flex flex-col justify-center items-center w-full bg-[#1b1b30] " margin={"auto"}>
+      <Container className="flex flex-col justify-center items-center w-full backdrop-blur-xl backdrop-brightness-150
+      bg-black/80" margin={"auto"}>
         <div className=" h-full py-[32px] px-[80px] w-[calc(100vw)] xl:w-[1440px]" >
           <Grid
             display={"flex"}
