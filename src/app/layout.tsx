@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Web3Modal } from "context/Web3Modal";
-import { inject } from '@vercel/analytics';
-
-inject({ mode: 'production' });
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: "meta v",
@@ -21,7 +19,9 @@ export default function RootLayout({
         <link rel="icon" href="/assets/logo.svg" type="image/png" sizes="32x32" />
       </head>
       <body className="font-Oxanium">
-        <Web3Modal>{children}</Web3Modal>
+        
+          <Web3Modal>{children} <Analytics/></Web3Modal>
+          
       </body>
     </html>
   );
