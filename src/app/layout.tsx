@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Web3Modal } from "context/Web3Modal";
-import { Analytics } from "@vercel/analytics/react"
+import { inject } from '@vercel/analytics';
+
+inject({ mode: 'production' });
+
 export const metadata: Metadata = {
   title: "meta v",
   description: "Meta",
