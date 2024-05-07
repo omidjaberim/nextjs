@@ -39,7 +39,7 @@ const SideMenu = (props:IProp)=>{
                 <span className=' absolute bottom-20 left-[125px] text-white font-semibold font-Oxanium text-[20px]' >Whitepaper</span>
             </div>
             </List>
-      </Drawer>
+          </Drawer>
         </Grid>
     )
 }
