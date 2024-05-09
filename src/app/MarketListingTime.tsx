@@ -63,7 +63,7 @@ const PresaleSection = ()=>{
                                   color: "rgba(256,256,256,0.16)",
                                   WebkitTextFillColor: "rgba(256,256,256,0.16)",
                                   WebkitTextStroke: "1px white",
-                          }} >Secound Life</Grid>
+                          }} >Second Life</Grid>
                         </Grid>
                         <Typography  sx={subTypeStyle} className="flex justify-start lg:text-start lg:w-full w-full 2sm:w-3/4 md:w-1/2 text-center  font-Oxanium  py-2 px-5 rounded-2xl"  >
                             The convergence of reality and innovation, where <br/> aspirations are converted into digital realms.
