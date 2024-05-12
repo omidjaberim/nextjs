@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Web3Modal } from "context/Web3Modal";
 import { Analytics } from '@vercel/analytics/react';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
   title: "meta v",
   description: "Meta",
@@ -20,7 +20,7 @@ export default function RootLayout({
       </head>
       <body className="font-Oxanium">
         
-          <Web3Modal>{children} <Analytics/></Web3Modal>
+          <Web3Modal>{children} <Analytics/><SpeedInsights/></Web3Modal>
           
       </body>
     </html>

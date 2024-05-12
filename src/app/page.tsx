@@ -9,7 +9,7 @@ import Tokenomics from "./Tokenomics";
 import Roadmap from "./Roadmap";
 import FaqSection from "./FaqSection";
 import Footer from "./Footer";
-import {    useLayoutEffect, useState } from "react";
+import {  useLayoutEffect, useState } from "react";
 import Chip from '@mui/material/Chip';
 import  SocialSection,{SocialButton}  from "./components/SocialSection";
 
