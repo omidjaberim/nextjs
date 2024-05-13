@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, styled } from '@mui/system';
 import { Grid, Typography } from '@mui/material';
 import Image from "next/image";
-
+import tokenomics from "@/assets/tokenomics.png"
 const Container = styled(Box)(({theme})=>({  
 display: 'flex',
 padding: '0px 125px',
@@ -78,7 +78,7 @@ const Tokenomics = (props:{t:any})=>{
         <Container id="tokenomics" className="bg-[#11121A]  flex flex-col py-[72px] " >
            <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium mt-[2px] mb-[25px]"} >{t("Tokenomics")}</Title>
             <Grid className='flex justify-center relative w-full' >
-                <Image src='/tokenomics.png' alt="" width={880} height={850} />
+                <Image src={tokenomics} alt="" width={880} height={850} />
             </Grid>
         </Container>
     )

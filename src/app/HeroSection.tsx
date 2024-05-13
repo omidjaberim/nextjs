@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Box, styled, useMediaQuery } from "@mui/system";
 import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
-
+import aif from "@/assets/aif.jpg"
+import vrf from "@/assets/vrf.jpg"
+import bcf from "@/assets/bcf.jpg"
 
 const Title =  styled(Typography)(({})=>({  
   textAlign: "center",
@@ -36,7 +38,7 @@ const Hero = (props:{t:any}) => {
             className={`z-10  w-full md:w-[424px] bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}            
           >
               <div className="w-full bg-black rounded-lg" >
-              <Image src="/aif.jpg" alt="" width={385} height={160}  className="mx-auto" />
+              <Image src={aif} alt="" width={385} height={160}  className="mx-auto" />
               
               </div>
               <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>
@@ -52,7 +54,7 @@ const Hero = (props:{t:any}) => {
             className={`z-10  w-full md:w-[424px]  bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}
             
           ><div className="w-full bg-black rounded-lg" >
-              <Image src="/vrf.jpg" alt="" width={157} height={160}  className="mx-auto" />
+              <Image src={vrf} alt="" width={157} height={160}  className="mx-auto" />
               </div>
               <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>{t('Blockchain')}</Typography>
               <div className=' text-[#ced0d6] text-[16px] leading-7 flex flex-col px-[16px]' >            
@@ -65,7 +67,7 @@ const Hero = (props:{t:any}) => {
             className={`z-10  w-full md:w-[424px]  bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}
             
           ><div className="w-full bg-black rounded-lg" >
-            <Image src="/bcf.jpg" alt="" width={262} height={330}  className="mx-auto" />
+            <Image src={bcf} alt="" width={262} height={330}  className="mx-auto" />
             </div>
             <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>{t('Artificial Intelligence (AI)')}</Typography>          
             <div className=' text-[#ced0d6] text-[16px] leading-7 flex flex-col px-[16px]' >            

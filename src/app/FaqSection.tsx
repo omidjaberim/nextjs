@@ -8,7 +8,7 @@ import {
   useTheme,
   Grid
 } from "@mui/material";
-
+import FAQImg from "@/assets/FAQ.png"
 import minus from "@/assets/minus-icon.svg";
 import plus from "@/assets/plus-icon.svg";
 import Image from "next/image";
@@ -169,7 +169,7 @@ const FaqSection = (props:{t:any}) => {
           </FaqWrapper>
           </div>
           <div className="flex mb-[150px] lg:mb-0 flex-col w-full lg:w-1/2 items-center lg:flex-row justify-start lg:justify-center" >
-            <Image src="/FAQ.png" alt="" width={340} height={340} className="w-[200px] h-[318px]  " />
+            <Image src={FAQImg} alt="" width={340} height={340} className="w-[200px] h-[318px]  " />
           </div>
       </section>
   );

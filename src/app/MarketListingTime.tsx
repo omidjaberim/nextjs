@@ -15,6 +15,7 @@ import { styled } from '@mui/system';
 import elips1 from "@/assets/Ellipse01.svg"
 import elips2 from "@/assets/Ellipse02.svg"
 import elips3 from "@/assets/Ellipse03.svg"
+import girl from "@/assets/girl2.png"
 
 const PresaleSection = (props:{t:any})=>{
   const {t} = props;
@@ -51,7 +52,7 @@ const PresaleSection = (props:{t:any})=>{
               <Image src={elips2} alt="" width={350} height={140} className="blur-xl absolute top-[16%] right-[60%]" />
               <Image src={elips1} alt="" width={340} height={140} className="blur-xl absolute top-[12%] right-[24%]" />
               <Image src={elips3} alt="" width={270} height={140} className="blur-xl absolute top-[10%] left-[12%]" />
-              <Image src="/girl2.png" alt="" width={420} height={140} className="absolute top-0 right-[40%]" />              
+              <Image src={girl} alt="" width={420} height={140} className="absolute top-0 right-[40%]" />              
               <Grid className="w-full relative px-[16px] md:px-0"  >            
                 <div                
                   className="w-full font-Roboto flex flex-col lg:flex-row justify-center lg:justify-between  
