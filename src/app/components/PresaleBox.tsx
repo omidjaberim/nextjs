@@ -237,7 +237,7 @@ function PresaleBox(props:{t:any}) {
         sx={{
           gap: 2,
         }}
-        className="3sm:px-[24px] px-1 py-[12px] rounded-[26px] bg-[#000000d2] "
+        className="3sm:px-[24px] px-1 py-[12px] rounded-[26px] bg-[#000000d2]"
       >   
         <Grid className="text-[26px] text-white font-Oxanium  font-bold flex  justify-center items-center" >
           <span className="flex  justify-center items-center" >{t("BUY")} <Title>&nbsp;$MV&nbsp;</Title> {t("TOKEN")}  </span>
@@ -249,7 +249,6 @@ function PresaleBox(props:{t:any}) {
             alignItems={{ xs: "start", md: "center" }}
             className="font-Oxanium flex-col 3sm:flex-row mb-2"
           >
-
             <Typography
               variant="h1"
               sx={{
@@ -260,7 +259,8 @@ function PresaleBox(props:{t:any}) {
               }}
               className="flex items-center font-Oxanium text-[20px] md:text-[28px] 3sm:mx-1 mx-auto text-[#B28FEE]"
             >
-                {t("Stage")} {Number(currentStage) + 1} / 5
+                {/* {t("Stage")} {Number(currentStage) + 1} / 5 */}
+                {t("Stage")} 2 / 5
             </Typography>
             <Grid
               sx={{

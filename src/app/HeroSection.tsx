@@ -37,9 +37,8 @@ const Hero = (props:{t:any}) => {
         <CardStyle 
             className={`z-10  w-full md:w-[424px] bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}            
           >
-              <div className="w-full bg-black rounded-lg" >
-              <Image src={aif} alt="" width={385} height={160}  className="mx-auto" />
-              
+              <div className=" bg-black rounded-lg flex items-center h-[260px] w-full" >
+                <Image src={vrf} alt="" width={157} height={160}  className="mx-auto" />              
               </div>
               <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>
                 {t('Virtual Reality')}                
@@ -53,8 +52,8 @@ const Hero = (props:{t:any}) => {
         <CardStyle 
             className={`z-10  w-full md:w-[424px]  bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}
             
-          ><div className="w-full bg-black rounded-lg" >
-              <Image src={vrf} alt="" width={157} height={160}  className="mx-auto" />
+          ><div className="w-full bg-black rounded-lg flex items-center h-[260px] " >
+              <Image src={bcf} alt="" width={157} height={160}  className="mx-auto " />
               </div>
               <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>{t('Blockchain')}</Typography>
               <div className=' text-[#ced0d6] text-[14px] leading-7 flex flex-col px-[16px]' >            
@@ -65,8 +64,8 @@ const Hero = (props:{t:any}) => {
         </CardStyle>
         <CardStyle 
             className={`z-10  w-full md:w-[424px]  bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}            
-          ><div className="w-full bg-black rounded-lg" >
-            <Image src={bcf} alt="" width={262} height={330}  className="mx-auto" />
+          ><div className="w-full bg-black rounded-lg flex items-center h-[260px]" >
+            <Image src={aif} alt="" width={262} height={330}  className="mx-auto" />
             </div>
             <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>{t('Artificial Intelligence (AI)')}</Typography>          
             <div className=' text-[#ced0d6] text-[14px] leading-7 flex flex-col px-[16px]' >            

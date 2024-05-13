@@ -2,7 +2,6 @@ import tokenAbi from "./tokenAbi.json";
 import preSaleAbi from "./preSaleAbi.json";
 import usdtAbi from "./usdtAbi.json";
 import usdcAbi from "./usdcAbi.json";
-import stakingAbi from "./stakingAbi.json";
 import {
   tokenAddress,
   preSaleAddress,
