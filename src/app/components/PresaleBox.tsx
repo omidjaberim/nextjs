@@ -259,8 +259,7 @@ function PresaleBox(props:{t:any}) {
               }}
               className="flex items-center font-Oxanium text-[20px] md:text-[28px] 3sm:mx-1 mx-auto text-[#B28FEE]"
             >
-                {/* {t("Stage")} {Number(currentStage) + 1} / 5 */}
-                {t("Stage")} 2 / 5
+                {t("Stage")} {Number(currentStage) + 1} / 5
             </Typography>
             <Grid
               sx={{
@@ -328,7 +327,7 @@ function PresaleBox(props:{t:any}) {
               <span
                 className="text-[#e4acb2] text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
               >                
-                  $0.0120
+                  $0.0165
               </span>
             </Grid>
             <Grid
