@@ -653,9 +653,8 @@ function PresaleBox(props:{t:any}) {
             >
               
               {loading ? <span className="font-bold text-oxanium text-[22px]" >{t("Processing")}...</span>  : account ? 
-              <span className="font-bold text-oxanium text-[32px]" >{t("Buy")}</span>:
-              <span className="font-bold text-oxanium text-[22px]" >{t("Connect")}</span>}
-              
+              <span className="font-bold text-oxanium text-[32px]" >{t("BUY")}</span>:
+              <span className="font-bold text-oxanium text-[22px]" >{t("Connect")}</span>}              
             </StyledButton>
           </Stack>
           {account && (
