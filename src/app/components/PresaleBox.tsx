@@ -27,7 +27,8 @@ import {
   usdtWriteFunction,
 } from "context/hooks";
 
-function PresaleBox() {
+function PresaleBox(props:{t:any}) {
+  const {t} = props;
   const matches = useMediaQuery("(max-width:650px)");
   const { account } = useContext(AppContext);
   const { open } = useWeb3Modal();
@@ -224,6 +225,7 @@ function PresaleBox() {
     backgroundClip:'text',
     })  
   )
+
   return (
     <Grid
       width="100%" 
@@ -238,7 +240,7 @@ function PresaleBox() {
         className="3sm:px-[24px] px-1 py-[12px] rounded-[26px] bg-[#000000d2] "
       >   
         <Grid className="text-[26px] text-white font-Oxanium  font-bold flex  justify-center items-center" >
-          <span className="flex  justify-center items-center" >BUY <Title>&nbsp;$MV&nbsp;</Title> TOKEN</span>
+          <span className="flex  justify-center items-center" >{t("BUY")} <Title>&nbsp;$MV&nbsp;</Title> {t("TOKEN")}  </span>
         </Grid>           
         <Grid className="bg-[#11121A] rounded-2xl  p-[24px]" >         
           <Stack
@@ -258,7 +260,7 @@ function PresaleBox() {
               }}
               className="flex items-center font-Oxanium text-[20px] md:text-[28px] 3sm:mx-1 mx-auto text-[#B28FEE]"
             >
-                Stage {Number(currentStage) + 1} / 5
+                {t("Stage")} {Number(currentStage) + 1} / 5
             </Typography>
             <Grid
               sx={{
@@ -322,7 +324,7 @@ function PresaleBox() {
               }}
               className="font-Oxanium text-[14px] 3lg:text-[18px] flex w-3/4 justify-center 3sm:w-1/2  3sm:mx-1 mx-auto bg-[#352E3E] px-[4px] rounded-lg"
             >
-              Next Price &nbsp;
+              {t("Next Price")} &nbsp;
               <span
                 className="text-[#e4acb2] text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
               >                
@@ -347,7 +349,7 @@ function PresaleBox() {
                 }}
                 className="font-Oxanium text-[14px] 3lg:text-[18px] "
               >
-                Listing Price &nbsp;
+                {t("Listing Price")} &nbsp;
               </Grid>
               <Typography
                 variant="body1"
@@ -430,7 +432,7 @@ function PresaleBox() {
                 }}
                 className="font-Oxanium"
               >
-                Tokens Sold
+                {t("Tokens Sold")}
               </Typography>
               <Typography
                 variant="subtitle2"
@@ -465,7 +467,7 @@ function PresaleBox() {
                 }}
                 className="font-Oxanium"
               >
-                USD Raised
+                {t("USD Raised")}
               </Typography>
               <Typography
                 variant="subtitle2"
@@ -506,7 +508,7 @@ function PresaleBox() {
               }}
               className="leading-8 mb-[16px] text-[28px] font-Oxanium"
             >
-              Buy With
+              {t("Buy With")}
             </Typography>
             <Stack
               sx={{
@@ -650,9 +652,9 @@ function PresaleBox() {
               onClick={async () => (account ? buyHandler() : await open())}
             >
               
-              {loading ? <span className="font-bold text-oxanium text-[22px]" >Processing...</span>  : account ? 
-              <span className="font-bold text-oxanium text-[32px]" >Buy</span>:
-              <span className="font-bold text-oxanium text-[22px]" >Connect</span>}
+              {loading ? <span className="font-bold text-oxanium text-[22px]" >{t("Processing")}...</span>  : account ? 
+              <span className="font-bold text-oxanium text-[32px]" >{t("Buy")}</span>:
+              <span className="font-bold text-oxanium text-[22px]" >{t("Connect")}</span>}
               
             </StyledButton>
           </Stack>
@@ -669,7 +671,7 @@ function PresaleBox() {
                 }}
                 className="font-Oxanium"
               >
-                Your Balance :{" "}
+                {t("Your Balance")} :{" "}
                 <span
                   style={{
                     color: "#e4acb2",

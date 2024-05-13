@@ -12,8 +12,7 @@ import {
 import minus from "@/assets/minus-icon.svg";
 import plus from "@/assets/plus-icon.svg";
 import Image from "next/image";
-import gridLine from "@/assets/gridLine.svg";
-import faq from "@/assets/webglPreview/BlackGlassCube.png" 
+
 
 const ExpandPlusMinus = ({ isExpanded }:{isExpanded:boolean}) => {
   return (
@@ -26,6 +25,8 @@ const ExpandPlusMinus = ({ isExpanded }:{isExpanded:boolean}) => {
 const FAQ = ({ question, answer, expanded, handleChange, index }:{question:string;answer:string;expanded:number;handleChange:(index:number)=>void;index:number}) => {
   const theme =  useTheme();
   const isMediumScreen  = useMediaQuery(theme.breakpoints.down('md'));
+  
+
   return (
       <Accordion
         expanded={index == expanded}
@@ -117,40 +118,42 @@ const GradientText = styled(Typography)(({  }) => ({
 }));
 
 
-const sampleFaqs = [
-  {
-    question: "What is META-V?",
-    answer:
-      "The META-V economy relies on its cryptocurrency and a marketplace for NFTs. In this metaverse, individuals can buy, sell, or trade NFTs representing digital assets and properties, ensuring ownership and potential value growth. META-V's (MV) token facilitates secure transactions, creating a smooth and safe economic system in the metaverse.",
-  },
-  {
-    question: "How does the META-V economy work?",
-    answer:
-      "META-V accessible to anyone interested in virtual worlds, digital economies, or online communities. Users can create an avatar to explore the metaverse, engage in activities, and build their presence in the digital universe.",
-  },
-  {
-    question: "Can anyone join META-V?",
-    answer:
-      "In META-V, users explore a diverse digital world without limitations. They engage in various virtual activities, from social gatherings to work, education, and entertainment. The platform mirrors real-life tasks, offering a seamless virtual experience without boundaries.",
-  },
-  {
-    question: "What can I do in META-V?",
-    answer:
-      "To access additional details regarding META-V, such as technical specifications, progress reports, and upcoming community gatherings, please visit our official website. We also encourage you to peruse the whitepaper and engage with our META-V social media platforms to stay informed on the latest developments and announcements.",
-  },
-];
-const FaqSection = () => {
-  const [expanded, setExpand] = useState(0);
 
+const FaqSection = (props:{t:any}) => {
+  const {t} = props;
+  const [expanded, setExpand] = useState(0);
   const handleChange = (index:number) => {
     setExpand(expanded === index ? -1 : index);
   };
-
+  const sampleFaqs = [
+    {
+      question: t("What is META-V?"),
+      answer:
+      t("In META-V, users explore a diverse digital world without limitations"),
+      
+    },
+    {
+      question: t("How does the META-V economy work"),
+      answer:
+      t("The META-V economy relies on its cryptocurrency and a marketplace for NFTs"),
+        
+    },
+    {
+      question: t("Can anyone join META-V"),
+      answer:t("META-V accessible to anyone interested in virtual worlds, digital economies"),
+        
+    },
+    {
+      question: t("What can I do in META-V?"),
+      answer:
+        t("To access additional details regarding META-V"),
+    },
+  ];
   return (
       <section id="FAQ"  className="lg:max-w-[1440px] mx-auto flex justify-center flex-col lg:flex-row lg:justify-between  bg-[#11121A] w-full font-Oxanium p-[28px]" >        
         <div className="flex flex-col justify-center w-full lg:w-1/2" >
         <GradientText className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium mt-[2px] mb-[25px]"}>
-          FAQ
+          {t('FAQ')}
         </GradientText>        
           <FaqWrapper zIndex={1} className="mb-[144px] font-Oxanium mx-auto mt-[28px]">
             {sampleFaqs.map((faq, index) => (

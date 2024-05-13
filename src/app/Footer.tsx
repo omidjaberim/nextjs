@@ -107,7 +107,7 @@ const SocialSection = () => {
 };
 
 const Footer = (props:any) => {
-  const {scrollToId} = props;
+  const {scrollToId,t} = props;
   return (
       <Container className="flex flex-col justify-center items-center w-full backdrop-blur-xl backdrop-brightness-150
       bg-black/80" margin={"auto"}>
@@ -190,7 +190,7 @@ const Footer = (props:any) => {
                   className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all `}
                   onClick={()=>scrollToId(menu.link.slice(1))}
                 >
-                  {menu.title}
+                  {t(menu.title)}
                 </Typography>
               ))}
             </Grid>

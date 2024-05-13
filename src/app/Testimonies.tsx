@@ -48,84 +48,10 @@ import next from "next";
       }
   }
   
-  const commentsData = [{
-    profile :{
-        avatar :SatyaNadella.src,
-        username:"Satya Nadella",
-        description:"Microsoft CEO", 
-    },
-    comment :`“The metaverse is here, and it’s not only transforming how we see the world but how we participate in it – from the factory floor to the meeting room.”`
-  },
-  {
-    profile :{
-        avatar :AndrewBosworth.src,
-        username:"Andrew Bosworth",
-        description:"Facebook Reality Labs", 
-    },
-    comment :`“The watchword of the metaverse is continuity. The feeling that when you go from one place to another place, there are some things that… identity come with you. So avatars are important… your digital goods come with you…Can your friends come with you? Can you travel together? Can you stay in communication while you move from place to place?”`
-  },
-  {
-    profile :{
-        avatar :MatthewBall.src,
-        username:"Matthew Ball",
-        description:"Entrepreneur", 
-    },
-    comment :`“The metaverse is best understood as the shift of computing and interaction from a device in your pocket into a virtual simulation.”`
-  },
-  {
-    profile :{
-        avatar :RichardStallman.src,
-        username:"Richard Stallman",
-        description:"Programmer", 
-    },
-    comment :`“A metaverse is a possible future in which online communities, organizations, and economies have evolved beyond their current forms.”`
-  },
-  {
-    profile :{
-        avatar :SatyaNadella.src,
-        username:"Satya Nadella",
-        description:"Microsoft CEO", 
-    },
-    comment :`“It is a wide-scale and interoperable nеtwork of rеal-timе,  rеndеrеd,  3D virtual worlds that can bе еxpеriеncеd synchronously and continuously by an effectively unlimitеd numbеr of usеrs,  each with an individual sеnsе of prеsеncе.”`
-  },
-
-  {
-    profile :{
-        avatar :JensenHuang.src,
-        username:"Jensen Huang",
-        description:"NVIDIA CEO", 
-    },
-    comment :`“Just like in the infancy of the internet, no one can predict exactly how and how large the metaverse will grow — but today, we know we can lay the foundations.`
-  },
-  {
-    profile :{
-        avatar :MarkZuckerberg.src,
-        username:"Mark Zuckerberg",
-        description:"META CEO", 
-    },
-    comment :`“It is a wide-scale and interoperable nеtwork of rеal-timе,  rеndеrеd,  3D virtual worlds that can bе еxpеriеncеd synchronously and continuously by an effectively unlimitеd numbеr of usеrs,  each with an individual sеnsе of prеsеncе.”`
-  },
-  {
-    profile :{
-        avatar :EricSchmidt.src,
-        username:"Eric Schmidt",
-        description:"Google CEO", 
-    },
-    comment :`“Meta’s metaverse would be a massive factor in replacing human relationships. Not only would it threaten or endanger human interaction, but it could contribute to people choosing more of the AR world rather than the real world outside the lenses.”`
-  },
-  {
-    profile :{
-        avatar :AuthorMuratDurmus.src,
-        username:"AuthorMurat Durmus",
-        description:"AISOMA CEO", 
-    },
-    comment :`“The Metaverse is the ideal playground in which the AI can let off steam. The more humans lose themselves in it, the more the AI will take control. That much is certain.”`
-  },
-
-  ]
 
 const Comments =({profile ,comment }:{profile:any;comment:string})=>{
     const [hover,setHover] = useState(false);
+
     return (
         <Grid component={"div"} onMouseOver={()=>{setHover(true)}} onMouseLeave={()=>{setHover(false)}}  sx={{
             display:"flex",
@@ -190,7 +116,83 @@ const Comments =({profile ,comment }:{profile:any;comment:string})=>{
     );
   };
 
-  const CarouselWrapper = ()=>{
+  const CarouselWrapper = ({t}:{t:any})=>{
+  
+  const commentsData = [{
+      profile :{
+          avatar :SatyaNadella.src,
+          username:"Satya Nadella",
+          description:"Microsoft CEO", 
+      },
+      comment :`“${t("The metaverse is here")}”`
+    },
+    {
+      profile :{
+          avatar :AndrewBosworth.src,
+          username:"Andrew Bosworth",
+          description:"Facebook Reality Labs", 
+      },
+      comment :`“${t("The watchword of the metaverse")}”`
+    },
+    {
+      profile :{
+          avatar :MatthewBall.src,
+          username:"Matthew Ball",
+          description:"Entrepreneur", 
+      },
+      comment : `“${t("The metaverse is best understood")}”`
+    },
+    {
+      profile :{
+          avatar :RichardStallman.src,
+          username:"Richard Stallman",
+          description:"Programmer", 
+      },
+      comment :`“${t("A metaverse is a possible future")}”`
+    },
+    {
+      profile :{
+          avatar :SatyaNadella.src,
+          username:"Satya Nadella",
+          description:"Microsoft CEO", 
+      },
+      comment :`“${t("It is a wide-scale and interoperable nеtwork")}”`
+    },
+  
+    {
+      profile :{
+          avatar :JensenHuang.src,
+          username:"Jensen Huang",
+          description:"NVIDIA CEO", 
+      },
+      comment : `“${t("Just like in the infancy of the internet")}”` 
+    },
+    {
+      profile :{
+          avatar :MarkZuckerberg.src,
+          username:"Mark Zuckerberg",
+          description:"META CEO", 
+      },
+      comment : `“${t("It is a wide-scale and interoperable nеtwork")}”`
+    },
+    {
+      profile :{
+          avatar :EricSchmidt.src,
+          username:"Eric Schmidt",
+          description:"Google CEO", 
+      },
+      comment : `“${t("Metas metaverse would be a massive factor")}”`
+    },
+    {
+      profile :{
+          avatar :AuthorMuratDurmus.src,
+          username:"AuthorMurat Durmus",
+          description:"AISOMA CEO", 
+      },
+      comment : `“${t("The Metaverse is the ideal playground")}”`
+    },
+  
+  ]
     return (
           <Carousel  arrows={false} sliderClass="commentItems" 
             itemClass="carasolItem"  infinite autoPlay={!false} autoPlaySpeed={5000} 
@@ -202,11 +204,12 @@ const Comments =({profile ,comment }:{profile:any;comment:string})=>{
       )
   }
 
-  const Testimonies = () => {
+  const Testimonies = (props:{t:any}) => {
+    const {t} = props
     return (
       <Grid className="bg-black p-[26px]" >
         <Stack className="lg:max-w-[1440px] mx-auto mt-0  px-[16px] md:px-0" component={"section"}  width={"100%"} justifyContent={"center"} gap={4}  >
-          <CarouselWrapper/>
+          <CarouselWrapper t={t}/>
         </Stack>
       </Grid>
     )

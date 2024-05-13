@@ -45,4 +45,10 @@ body::-webkit-scrollbar-thumb {
 
 ol li::before {content: "•"; color: white;
     display: inline-block; width: 1em;
-    margin-left: -1em}
+    margin-left: -1em
+}
+
+ul.css-6hp17o-MuiList-root-MuiMenu-list{
+    padding-top: 0 ;
+    padding-bottom: 0 ;
+}    

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import {  Grid } from "@mui/material";
 
-export default function TimerCountDown() {
-const [countTime, setCountDateTime] = useState({
+export default function TimerCountDown(props:{t:any}) {
+const {t} = props;
+  const [countTime, setCountDateTime] = useState({
     time_days: 0,
     time_Hours: 0,
     time_Minusts: 0,
@@ -47,7 +48,7 @@ const [countTime, setCountDateTime] = useState({
             <Grid className="text-[28px] font-semibold	 md:text-3xl	pt-[6px] leading-6 md:leading-10  bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text" >
               {countTime.time_days}              
             </Grid>
-            <span className="text-[12px] leading-6 font-normal	text-white font-Oxanium">Day</span>          
+            <span className="text-[12px] leading-6 font-normal	text-white font-Oxanium">{t("Day")}</span>          
         </Grid>
         <Grid  
           className="mx-4  rounded-[16px] text-gradient-to-r from-[#FED3CA] to-[#FFA998]" display="flex" flexDirection="column" alignItems="center"   >
@@ -55,7 +56,7 @@ const [countTime, setCountDateTime] = useState({
         
             {countTime.time_Hours}
             </Grid>
-            <span className={"text-[12px]  leading-6 text-white"}>{"Hours"}</span>          
+            <span className={"text-[12px]  leading-6 text-white"}>{t("Hours")}</span>          
         </Grid>
         <Grid  
           className="mx-4 rounded-[16px] text-gradient-to-r from-[#FED3CA] to-[#FFA998]" display="flex" flexDirection="column" alignItems="center"   >
@@ -63,7 +64,7 @@ const [countTime, setCountDateTime] = useState({
             
             {countTime.time_Minusts}
             </Grid>
-            <span className={"text-[12px]  leading-6 text-white"}>{"Minutes"}</span>          
+            <span className={"text-[12px]  leading-6 text-white"}>{t("Minutes")}</span>          
         </Grid>
         <Grid  
           className="mx-4 rounded-[16px] text-gradient-to-r from-[#FED3CA] to-[#FFA998]" display="flex" flexDirection="column" alignItems="center"   >
@@ -71,7 +72,7 @@ const [countTime, setCountDateTime] = useState({
             
             {countTime.time_seconds}
             </Grid>
-            <span className={"text-[12px]  leading-6 text-white"}>{"Seconds"}</span>          
+            <span className={"text-[12px]  leading-6 text-white"}>{t("Seconds")}</span>          
         </Grid>
       </Grid>
   );

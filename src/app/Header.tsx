@@ -10,10 +10,13 @@ import SideMenu from "./components/SideMenu";
 import { StyledButton } from "./components/SmallComponents/AppComponents";
 import { AppContext } from "context/utils";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
+import LangMenu from "./components/SmallComponents/LangManu";
 
 interface IProp {
   scrollToId: (x: string) => void;
   selectedItem: string;
+  t:any;
+  currentLang:string;
 }
 
 const Header = (props: IProp) => {
@@ -23,7 +26,7 @@ const Header = (props: IProp) => {
   const toggleDrawer = (newOpen: boolean) => {
     setOpen(newOpen);
   };
-  const { scrollToId, selectedItem } = props;
+  const { scrollToId, selectedItem, t ,currentLang } = props;
 
   return (
     <Grid
@@ -56,7 +59,7 @@ const Header = (props: IProp) => {
               }`}
               onClick={() => scrollToId("presale")}
             >
-              Presale
+              {t('Presale')}
             </span>
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${
@@ -64,7 +67,7 @@ const Header = (props: IProp) => {
               } `}
               onClick={() => scrollToId("about")}
             >
-              About META-V
+              {t('About')} META-V
             </span>
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${
@@ -72,7 +75,7 @@ const Header = (props: IProp) => {
               }  `}
               onClick={() => scrollToId("Technology")}
             >
-              Technology
+               {t('Technology')}
             </span>
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${
@@ -80,7 +83,8 @@ const Header = (props: IProp) => {
               }  `}
               onClick={() => scrollToId("tokenomics")}
             >
-              Tokenomics
+               {t('Tokenomics')}
+              
             </span>
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${
@@ -88,7 +92,7 @@ const Header = (props: IProp) => {
               }   `}
               onClick={() => scrollToId("roadmap")}
             >
-              Roadmap
+              {t('Roadmap')}
             </span>
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${
@@ -96,7 +100,7 @@ const Header = (props: IProp) => {
               }    `}
               onClick={() => scrollToId("FAQ")}
             >
-              FAQ
+              {t('FAQ')}
             </span>
           </Grid>
           <Grid className="sm:flex xlg:hidden">
@@ -109,18 +113,19 @@ const Header = (props: IProp) => {
           </Grid>
         </Grid>
         <Grid className="w-1/2 md:w-1/4 flex items-center justify-end gap-[8px] xl:gap-[16px] px-2">
+          <LangMenu  t={t} currentLang={currentLang} /> 
           <a
             href="https://meta-v.gitbook.io/meta-v/"
             className="flex cursor-pointer"
             target="_blank"
           >
-            Whitepaper
+            {t('Whitepaper')}
           </a>
           <StyledButton onClick={() => connectWallet()}>
             <span className="font-semibold text-[12px] lg:text-[14px] flex ">
               {account
                 ? account.slice(0, 4) + "..." + account.slice(-4)
-                : "Connect"  
+                :  t('Connect') 
                 }
             </span>
           </StyledButton>

@@ -1,17 +1,17 @@
 "use client"
-import { ClickAwayListener, Grid } from "@mui/material";
-import Header from "./Header";
-import MarketListingTime from "./MarketListingTime";
-import Testimonies from "./Testimonies";
-import AboutSection from "./AboutSection";
-import HeroSection from "./HeroSection";
-import Tokenomics from "./Tokenomics";
-import Roadmap from "./Roadmap";
-import FaqSection from "./FaqSection";
-import Footer from "./Footer";
-import {  useLayoutEffect, useState } from "react";
-import Chip from '@mui/material/Chip';
-import  SocialSection,{SocialButton}  from "./components/SocialSection";
+import { Grid } from "@mui/material";
+import Header from "../Header";
+import MarketListingTime from "../MarketListingTime";
+import Testimonies from "../Testimonies";
+import AboutSection from "../AboutSection";
+import HeroSection from "../HeroSection";
+import Tokenomics from "../Tokenomics";
+import Roadmap from "../Roadmap";
+import FaqSection from "../FaqSection";
+import Footer from "../Footer";
+import {  useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useTranslation } from '../i18n/client'
 
 const clamp = (value: number) => Math.max(0, value);
 
@@ -20,7 +20,7 @@ const isBetween = (value: number, floor: number, ceil: number) =>
 const useScrollspy = (ids: string[], offset: number = 0) => {
   const [activeId, setActiveId] = useState("");
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const listener = () => {
       const scroll = window.pageYOffset;
 
@@ -49,12 +49,15 @@ const useScrollspy = (ids: string[], offset: number = 0) => {
       window.removeEventListener("scroll", listener);
     };
   }, [ids, offset]);
-
+  
   return activeId;
 };
 
 
-export default function App() {
+export default  function App() {
+  const pathnameUrl = usePathname();  
+  const currentLang = pathnameUrl.slice(1)
+  const {t} = useTranslation(currentLang)
   const scrollToId = (id:string)=>{
       document.getElementById(id)?.scrollIntoView({
         behavior : 'smooth',
@@ -65,29 +68,22 @@ export default function App() {
   const ids = ["meta", "about", "Technology","tokenomics","roadmap","FAQ"];
   const activeId = useScrollspy(ids, 49);
 
-  const [socialSnack,setSocialSnack] = useState<boolean>(false);
-  const handleSocialBtnClick = ()=>{
-    setSocialSnack(!socialSnack)
-  }  
-  const closeSocial = ()=>{
-    setSocialSnack(false)
-  }  
 
   return (          
     <Grid  className="w-full flex flex-col justify-center items-center bg-[#11121A] relative">
-      <Header scrollToId={scrollToId} selectedItem={activeId} />       
+      <Header scrollToId={scrollToId} selectedItem={activeId} t={t} currentLang={currentLang} />
       <div className="w-full flex-col items-center justify-center relative ">         
         <div id="meta" className="w-full flex-col items-center justify-center" >
-          <MarketListingTime />          
-          <Testimonies />
+          <MarketListingTime t={t}/>          
+          <Testimonies t={t} />
         </div>
-        <AboutSection  />
-        <HeroSection />
-        <Tokenomics/>
-        <Roadmap/>
-        <FaqSection />        
+        <AboutSection t={t} />
+        <HeroSection t={t} />
+        <Tokenomics t={t}/>
+        <Roadmap t={t}/>
+        <FaqSection t={t} />        
       </div>  
-      <Footer scrollToId={scrollToId} selectedItem={activeId} />
+      <Footer t={t} scrollToId={scrollToId} selectedItem={activeId} />
     </Grid>
   );
 }

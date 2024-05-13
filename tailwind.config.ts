@@ -34,12 +34,6 @@ const config: Config = {
           Oxanium: [ 'Oxanium','ui-sans-serif', 'Arial'],
           Roboto: ['Roboto','ui-serif', 'Arial'],
       },
-      rotate: {
-        '320': '350deg',
-      },
-      backgroundImage: {
-        'hero-pattern': "url('/marketListBg.svg')",
-      }
     },
   },
   plugins: [

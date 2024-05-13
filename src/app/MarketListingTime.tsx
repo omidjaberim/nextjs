@@ -12,8 +12,12 @@ import TimerCountDown from "./components/SmallComponents/Timer";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import { styled } from '@mui/system';
+import elips1 from "@/assets/Ellipse01.svg"
+import elips2 from "@/assets/Ellipse02.svg"
+import elips3 from "@/assets/Ellipse03.svg"
 
-const PresaleSection = ()=>{
+const PresaleSection = (props:{t:any})=>{
+  const {t} = props;
     const typoStyle = {
       color: "#FFF",
       /* Heading/1 */
@@ -38,16 +42,15 @@ const PresaleSection = ()=>{
       backgroundClip:'text',
       })  
     )
-
     return (
       <Grid className="w-full max-w-[1440px] mx-auto py-[16px]" id="presale" 
         style={{backgroundSize:'30%,25%',
               backgroundPosition:'left 20% top 26%,right 15% top 28%',
               }} >          
             <Grid className="w-full flex  bg-black/33 relative "  >
-              <Image src="/Ellipse02.svg" alt="" width={350} height={140} className="blur-xl absolute top-[16%] right-[60%]" />
-              <Image src="/Ellipse01.svg" alt="" width={340} height={140} className="blur-xl absolute top-[12%] right-[24%]" />
-              <Image src="/Ellipse03.svg" alt="" width={270} height={140} className="blur-xl absolute top-[10%] left-[12%]" />
+              <Image src={elips2} alt="" width={350} height={140} className="blur-xl absolute top-[16%] right-[60%]" />
+              <Image src={elips1} alt="" width={340} height={140} className="blur-xl absolute top-[12%] right-[24%]" />
+              <Image src={elips3} alt="" width={270} height={140} className="blur-xl absolute top-[10%] left-[12%]" />
               <Image src="/girl2.png" alt="" width={420} height={140} className="absolute top-0 right-[40%]" />              
               <Grid className="w-full relative px-[16px] md:px-0"  >            
                 <div                
@@ -58,15 +61,16 @@ const PresaleSection = ()=>{
                         <Grid  sx={typoStyle} className="w-full  flex-col items-center lg:items-start leading-relaxed font-Oxanium py-1 px-2 rounded-2xl" display={"flex"} flexWrap={"wrap"}  
                           gap={{ xs:"1px", md:"2px", xl:"8px" }} width={"100%"} >
                           <Title className="text-[70px] leading-[64px]"  ml={{lg:"8px" ,xs:"8px"}}  >META-V</Title>  
-                          <Grid component="span" className="text-[40px] 2sm:text-[50px] leading-[64px]"  ml={{lg:"8px" ,xs:"8px"}} >Epitomizes a</Grid>  
+                          <Grid component="span" className="text-[40px] 2sm:text-[50px] leading-[64px]"  ml={{lg:"8px" ,xs:"8px"}} >{t("Epitomizes a")}</Grid>  
                           <Grid component="span" className="text-[40px] 2sm:text-[50px] leading-[64px]"  ml={{lg:"8px" ,xs:"8px"}} sx={{
                                   color: "rgba(256,256,256,0.16)",
                                   WebkitTextFillColor: "rgba(256,256,256,0.16)",
                                   WebkitTextStroke: "1px white",
-                          }} >Second Life</Grid>
+                          }} >{t("Second Life")}</Grid>
                         </Grid>
                         <Typography  sx={subTypeStyle} className="flex justify-start lg:text-start lg:w-full w-full 2sm:w-3/4 md:w-1/2 text-center  font-Oxanium  py-2 px-5 rounded-2xl"  >
-                            The convergence of reality and innovation, where <br/> aspirations are converted into digital realms.
+                        {t("The convergence of reality and innovation, where")}
+                             <br/> {t("aspirations are converted into digital realms.")}
                         </Typography>                 
                         <Grid className="bg-[#000000a8] rounded-2xl py-[20px] px-[4px] mt-[26px]  md:ml-4" > 
                           <Stack
@@ -85,10 +89,10 @@ const PresaleSection = ()=>{
                               }}
                               className="font-Oxanium leading-7 font-bold text-[22px] animate-pulse	"
                             >
-                              UNTIL PRICE INCREASE
+                              {t('UNTIL PRICE INCREASE')}
                             </Typography>
                             <Grid width={"100%"} maxWidth="440px">
-                              <TimerCountDown  />
+                              <TimerCountDown  t={t} />
                             </Grid>
                         </Stack>
                         </Grid>
@@ -121,7 +125,7 @@ const PresaleSection = ()=>{
                               <Link 
                                     className=" text-[#131315] leading-7 font-bold text-[18px] font-Oxanium w-[120px] "  
                                     href="https://meta-v.gitbook.io/meta-v/" target="_blank" style={{textDecoration:'none'}}  >
-                                White Paper
+                                    {t('Whitepaper')}
                               </Link>
                             </StyledButton>
                         </div>
@@ -130,7 +134,7 @@ const PresaleSection = ()=>{
                               <Link 
                                     className=" text-[#131315] leading-7 font-bold text-[18px] font-Oxanium w-[120px]"  
                                     href="https://coinsult.net/projects/meta-v/" target="_blank" style={{textDecoration:'none'}}  >
-                                Audit
+                                 {t('Audit')}
                               </Link>
                             </StyledButton>
                         </div>
@@ -138,7 +142,7 @@ const PresaleSection = ()=>{
                       </Grid>
                     </div>
                     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end" >
-                      <PresaleBox />
+                      <PresaleBox t={t} />
                     </div>
                 </div>
               </Grid>
