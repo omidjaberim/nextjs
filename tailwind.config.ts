@@ -25,6 +25,7 @@ const config: Config = {
       // => @media (min-width: 1440px) { ... }
       'xl': '1180px',
       'txl': '1324px',
+      'mtxl': '1354px',
       // => @media (min-width: 1440px) { ... }
       '2xl': '1480px',
       // => @media (min-width: 1440px) { ... }

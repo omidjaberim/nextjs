@@ -41,7 +41,7 @@ const Header = (props: IProp) => {
             alt="meta"
             width={24}
             height={24}
-            className="sm:flex xlg:hidden cursor-pointer mx-2 md:mx-0"
+            className="sm:flex mtxl:hidden cursor-pointer mx-2 md:mx-0"
             onClick={() => toggleDrawer(!open)}
           />
           <Grid onClick={()=>scrollTo(0,0)}  className="flex items-center " >
@@ -52,7 +52,7 @@ const Header = (props: IProp) => {
               META-V
           </span>
           </Grid>
-          <Grid className="text-white sm:hidden xlg:flex items-center gap-[2px] md:gap-[22px] xl:gap-[32px]">
+          <Grid className="text-white sm:hidden mtxl:flex items-center gap-[2px] md:gap-[22px] xl:gap-[32px]">
             <span
               className={`cursor-pointer hover:animate-pulse hover:scale-105 transition-all ${
                 selectedItem === "meta" ? " scale-105 text-[#B887FF]" : ""
@@ -103,7 +103,7 @@ const Header = (props: IProp) => {
               {t('FAQ')}
             </span>
           </Grid>
-          <Grid className="sm:flex xlg:hidden">
+          <Grid className="sm:flex mtxl:hidden">
             <SideMenu
               selectedItem={selectedItem}
               scrollToId={scrollToId}

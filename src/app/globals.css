@@ -49,6 +49,6 @@ ol li::before {content: "•"; color: white;
 }
 
 ul.css-6hp17o-MuiList-root-MuiMenu-list{
-    padding-top: 0 ;
-    padding-bottom: 0 ;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }    

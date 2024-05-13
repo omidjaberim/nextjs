@@ -25,7 +25,7 @@ const Roadmap = (props:{t:any})=>{
                         transition-all font-Oxanium relative xl:absolute xl:top-0 xl:left-[180px] `}          
                     >
                       <div className='font-Oxanium text-center absolute py-2 px-20 
-                              bg-[rgb(239,67,93)] top-[-20px]  md:right-[28%]  text-white font-bold '>
+                              bg-[rgb(239,67,93)] top-[-20px]  md:left-[82px]  text-white font-bold '>
                           {t("Foundation")}
                       </div>                
                       <Grid className='w-full flex justify-evenly' >
@@ -53,7 +53,7 @@ const Roadmap = (props:{t:any})=>{
                         transition-all font-Oxanium relative xl:absolute xl:top-[120px] xl:right-[180px] `}          
                     >
                       <div className='font-Oxanium text-center absolute py-2 px-20 
-                              bg-[rgb(0,173,134)] top-[-20px] md:right-[30%] text-white font-bold '>
+                              bg-[rgb(0,173,134)] top-[-20px] md:left-[82px] text-white font-bold '>
                         {t("Initial")}
                       </div>                
                       <Grid className='w-full flex justify-evenly' >
@@ -78,7 +78,7 @@ const Roadmap = (props:{t:any})=>{
                         transition-all font-Oxanium relative xl:absolute xl:top-[240px] xl:left-[180px] `}          
                     >
                       <div className='font-Oxanium text-center absolute py-2 px-20 
-                              bg-[rgb(36,177,255)] top-[-20px] md:right-[26%] text-white font-bold '>
+                              bg-[rgb(36,177,255)] top-[-20px] md:left-[82px] text-white font-bold '>
                         {t("Initial Launch")}
                       </div>                
                       <Grid className='w-full flex justify-evenly' >
@@ -103,7 +103,7 @@ const Roadmap = (props:{t:any})=>{
                         transition-all font-Oxanium relative xl:absolute xl:top-[360px] xl:right-[180px] `}          
                     >
                       <div className='font-Oxanium text-center absolute py-2 px-20 
-                              bg-[rgb(161,85,185)] top-[-20px] md:right-[26%] text-white font-bold '>
+                              bg-[rgb(161,85,185)] top-[-20px] md:left-[82px] text-white font-bold '>
                         {t("Expansion")}
                       </div>                
                       <Grid className='w-full flex justify-evenly' >
@@ -128,7 +128,7 @@ const Roadmap = (props:{t:any})=>{
                         transition-all font-Oxanium  relative xl:absolute xl:top-[480px] xl:left-[180px] `}          
                     >
                       <div className='font-Oxanium text-center absolute py-2 px-10 
-                              bg-[rgb(255,145,25)] top-[-20px] md:right-[22%] text-white font-bold '>
+                              bg-[rgb(255,145,25)] top-[-20px] md:left-[82px] text-white font-bold '>
                         {t("Integrating Advanced Tech")}
                       </div>                
                       <Grid className='w-full flex justify-evenly' >

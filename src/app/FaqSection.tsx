@@ -133,7 +133,7 @@ const FaqSection = (props:{t:any}) => {
       
     },
     {
-      question: t("How does the META-V economy work"),
+      question: t("How does the META-V Economy work"),
       answer:
       t("The META-V economy relies on its cryptocurrency and a marketplace for NFTs"),
         

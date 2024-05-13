@@ -44,11 +44,11 @@ const Hero = (props:{t:any}) => {
               <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>
                 {t('Virtual Reality')}                
               </Typography>
-          <div className='text-[#ced0d6] text-[16px] leading-7 flex flex-col px-[16px]' >            
-              <div  className='flex justify-start items-baseline' >
-                {t('embodies the essence of a second life')}                
+              <div className='text-[#ced0d6] text-[14px] leading-7 flex flex-col px-[16px]' >            
+                <div  className='flex justify-start items-baseline' >
+                  {t('embodies the essence of a second life')}                
+                </div>
               </div>
-          </div>
         </CardStyle>
         <CardStyle 
             className={`z-10  w-full md:w-[424px]  bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}
@@ -57,20 +57,19 @@ const Hero = (props:{t:any}) => {
               <Image src={vrf} alt="" width={157} height={160}  className="mx-auto" />
               </div>
               <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>{t('Blockchain')}</Typography>
-              <div className=' text-[#ced0d6] text-[16px] leading-7 flex flex-col px-[16px]' >            
-              <div  className='flex justify-start items-baseline' >
-                {t('blockchain is essential for asset ownership')}
+              <div className=' text-[#ced0d6] text-[14px] leading-7 flex flex-col px-[16px]' >            
+                <div  className='flex justify-start items-baseline' >
+                  {t('blockchain is essential for asset ownership')}
+                </div>
               </div>
-          </div>
         </CardStyle>
         <CardStyle 
-            className={`z-10  w-full md:w-[424px]  bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}
-            
+            className={`z-10  w-full md:w-[424px]  bg-[#11121A] hover:scale-105 transition-all font-Oxanium md:h-[652px] `}            
           ><div className="w-full bg-black rounded-lg" >
             <Image src={bcf} alt="" width={262} height={330}  className="mx-auto" />
             </div>
             <Typography className='font-Oxanium px-[16px]' component={'span'} color={"#B887FF"}  fontSize="20px" fontStyle={"normal"} fontWeight={"600"} lineHeight={"42px"}>{t('Artificial Intelligence (AI)')}</Typography>          
-            <div className=' text-[#ced0d6] text-[16px] leading-7 flex flex-col px-[16px]' >            
+            <div className=' text-[#ced0d6] text-[14px] leading-7 flex flex-col px-[16px]' >            
               <div  className='flex justify-start items-baseline' >
                 {t('AI is vital for overseeing and managing the META-V metaverse ecosystem')}              
               </div>

@@ -32,7 +32,7 @@ export default function LangMenu(props:{t:any,currentLang:string}) {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >          
-            <Avatar sx={{ width: 32, height: 32 }} className='hover:scale-110' >            
+            <Avatar sx={{ width: 24, height: 24 }} className='hover:scale-110 border border-black' >            
                 <Image src={`/${currentLang}.png`} alt={currentLang} width={32} height={32}   />            
             </Avatar>          
           </IconButton>
