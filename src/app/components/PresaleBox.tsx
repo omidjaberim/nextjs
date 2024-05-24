@@ -33,7 +33,7 @@ function PresaleBox(props:{t:any}) {
   const { account } = useContext(AppContext);
   const { open } = useWeb3Modal();
   const [buyWith, setBuyWith] = useState<string>("USDT");
-  const [endTime, setEndTime] = useState<number>(1722628800);
+  const [endTime, setEndTime] = useState<number>(1716567496);
   const [amount, setAmount] = useState<number | string>("");
   const [preSaleEndedStatus, setPresaleEndedStatus] = useState<boolean>(false);
   const [recivedTokens, setreceivedTokens] = useState<number | string>(0);
