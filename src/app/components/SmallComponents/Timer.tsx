@@ -13,7 +13,7 @@ const {t} = props;
   
 
   const startTime = async () => {
-    let until = moment.unix(1716544800).format("x");
+    let until = moment.unix(1716594916).format("x");
     let interval = setInterval(() => {
       let now = moment().format("x");
       const distance = +until - +now;
