@@ -33,7 +33,7 @@ function PresaleBox(props:{t:any}) {
   const { account } = useContext(AppContext);
   const { open } = useWeb3Modal();
   const [buyWith, setBuyWith] = useState<string>("USDT");
-  const [endTime, setEndTime] = useState<number>(1722628800);
+  const [endTime, setEndTime] = useState<number>(1716567496);
   const [amount, setAmount] = useState<number | string>("");
   const [preSaleEndedStatus, setPresaleEndedStatus] = useState<boolean>(false);
   const [recivedTokens, setreceivedTokens] = useState<number | string>(0);
@@ -327,7 +327,7 @@ function PresaleBox(props:{t:any}) {
               <span
                 className="text-[#e4acb2] text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
               >                
-                  $0.0165
+                  $0.0204
               </span>
             </Grid>
             <Grid
