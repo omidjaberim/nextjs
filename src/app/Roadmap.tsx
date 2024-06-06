@@ -17,9 +17,9 @@ const Roadmap = (props:{t:any})=>{
   const {t} = props;
     return (
           <Grid id='roadmap'  className='bg-[#000] w-full flex flex-col px-4 py-[60px] items-center'  >
-              <div className='mt-[6px] lg:mt-0 w-full  flex flex-col' >
+              <div className='mt-[6px] lg:mt-0 w-full flex flex-col' >
                   <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium mt-[12px] mb-[55px]"}  >{t("RoadMap")}</Title>
-                  <Grid className='w-full xl:w-[1320px] flex flex-wrap justify-center mx-auto gap-10 md:h-[1360px] 2lg:h-[700px] mt-[29px] relative' >
+                  <Grid className='w-full txl:w-[1320px] flex flex-wrap justify-center mx-auto gap-10 md:h-[1360px] 2lg:h-[700px] mt-[29px] relative' >
                     <Grid 
                       className={`z-10 px-5 w-full  md:w-[514px] md:h-[202px]  bg-[#11121A] md:bg-[#000] 2lg:bg-transparent md:bg-[url('/hexagonal.svg')] bg-no-repeat md:bg-cover hover:scale-105 
                         transition-all font-Oxanium relative xl:absolute xl:top-0 xl:left-[180px] `}          

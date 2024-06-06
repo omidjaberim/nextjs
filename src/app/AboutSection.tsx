@@ -30,7 +30,7 @@ const About = (props:{t:any})=>{
                     className="w-[250px] h-[120] lg:w-[350px] lg:h-[180px]  blur-xl absolute top-[20%] left-[5%] lg:left-[40%] z-10" />                    
                 <Image src={Ellipse01} alt="" width={370} height={190} 
                   style={{animation:'pulse 5s infinite'}} 
-                  className="blur-xl absolute top-[45%] left-[5%] lg:left-[55%] z-10 w-[250px] h-[120] lg:w-[370px] lg:h-[190px]" />
+                  className="blur-xl absolute top-[45%] left-[5%] lg:left-[55%] z-10 w-[60px] h-[70] lg:w-[170px] lg:h-[90px]" />
                 <div className={"w-full flex justify-center items-center mt-[10px] z-20"} >
                     <Title className={"md:text-[32px] text-[41px] mx-3 font-bold font-Oxanium my-[2px]"}>{t("About")} META-V</Title>            
                 </div>
