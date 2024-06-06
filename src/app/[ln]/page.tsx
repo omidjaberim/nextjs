@@ -65,9 +65,9 @@ export default  function App() {
         inline : "start"
       });
   }
+
   const ids = ["meta", "about", "Technology","tokenomics","roadmap","FAQ"];
   const activeId = useScrollspy(ids, 49);
-
 
   return (          
     <Grid  className="w-full flex flex-col justify-center items-center bg-[#11121A] relative">
