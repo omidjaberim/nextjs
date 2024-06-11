@@ -327,7 +327,7 @@ function PresaleBox(props:{t:any}) {
               <span
                 className="text-[#e4acb2] text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
               >                
-                  $0.0204
+                  $0.0240
               </span>
             </Grid>
             <Grid
