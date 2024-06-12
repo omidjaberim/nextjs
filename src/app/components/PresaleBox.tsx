@@ -108,7 +108,7 @@ function PresaleBox(props:{t:any}) {
       }
       setamountRaisedForAll(toLocalFormat(+totalRaisedAmount));
       setTotalSoldTokens(toLocalFormat(+totalTokeSoldContract));
-      let progForAll = (+totalRaisedAmount / 3600000) * 100;
+      let progForAll = ( +totalRaisedAmount / 3600000 ) * 100;
       setprogressBarForAll(+progForAll);
       const preSaleStatusContract: any | boolean = await preSaleReadFunction(
         "isPresaleEnded",
