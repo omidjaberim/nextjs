@@ -108,7 +108,7 @@ function PresaleBox(props:{t:any}) {
       }
       setamountRaisedForAll(toLocalFormat(+totalRaisedAmount));
       setTotalSoldTokens(toLocalFormat(+totalTokeSoldContract));
-      let progForAll = (+totalRaisedAmount / 3600000) * 100;
+      let progForAll = (+totalRaisedAmount / 975000) * 100;
       setprogressBarForAll(+progForAll);
       const preSaleStatusContract: any | boolean = await preSaleReadFunction(
         "isPresaleEnded",
@@ -327,7 +327,7 @@ function PresaleBox(props:{t:any}) {
               <span
                 className="text-[#e4acb2] text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
               >                
-                  $0.0204
+                  $0.0240
               </span>
             </Grid>
             <Grid
