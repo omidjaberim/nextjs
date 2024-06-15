@@ -18,7 +18,7 @@ const Title =  styled(Typography)(({})=>({
 const About = (props:{t:any})=>{
   const {t} = props;
   return (
-    <section id='about' className={"w-full flex flex-col items-center bg-[#11121A] font-Oxanium pt-[62px]  "}  > 
+    <section id='about' className={"w-full flex flex-col items-center bg-[#11121A] font-Oxanium pt-[62px] pb-[84px]  "}  > 
         <div className=' max-w-[1440px] relative' >   
           <div className=' flex lg:flex-row lg:justify-between items-center  mx-auto flex-col'>  
             <div className='flex flex-col items-center w-full py-[25px]' >

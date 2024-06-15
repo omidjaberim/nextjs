@@ -106,9 +106,9 @@ function PresaleBox(props:{t:any}) {
         const val1: any = Number(formatUnits(presaleData[1]?.toString(), dec));
         totalTokeSoldContract += Number(parseFloat(val1)?.toFixed(0));
       }
-      setamountRaisedForAll(toLocalFormat(+totalRaisedAmount));
-      setTotalSoldTokens(toLocalFormat(+totalTokeSoldContract));
-      let progForAll = ( +totalRaisedAmount / 3600000 ) * 100;
+      setamountRaisedForAll(toLocalFormat(totalRaisedAmount + 2126579));
+      setTotalSoldTokens(toLocalFormat(+totalTokeSoldContract + 123499157));
+      let progForAll = ( (totalRaisedAmount + 2126579) / 3600000 ) * 100;
       setprogressBarForAll(+progForAll);
       const preSaleStatusContract: any | boolean = await preSaleReadFunction(
         "isPresaleEnded",
@@ -309,27 +309,11 @@ function PresaleBox(props:{t:any}) {
             </Grid>
           </Stack>
           <Stack
-            justifyContent={"space-between"}
+            justifyContent={"flex-end"}
             gap={{ xs: 1, sm: 0 }}
             alignItems="center"
             className="flex flex-col items-start mt-2 3sm:mt-0 3sm:flex-row "
           >
-            <Grid              
-              sx={{
-                color: "#EBE9ED",
-                lineHeight: "32px",
-                fontWeight: "400",
-                textAlign: "center",
-              }}
-              className="font-Oxanium text-[14px] 3lg:text-[18px] flex w-3/4 justify-center 3sm:w-1/2  3sm:mx-1 mx-auto bg-[#352E3E] px-[4px] rounded-lg"
-            >
-              {t("Next Price")} &nbsp;
-              <span
-                className="text-[#e4acb2] text-[14px] 3lg:text-[18px] bg-gradient-to-r from-[#FED3CA]  to-[#FFA998] inline-block text-transparent bg-clip-text font-Oxanium"
-              >                
-                  $0.0240
-              </span>
-            </Grid>
             <Grid
               sx={{               
                 alignItems: "center",
@@ -449,7 +433,7 @@ function PresaleBox(props:{t:any}) {
                   }}
                   className="font-Oxanium text-2xl"
                 >
-                  {toLocalFormat(totalSoldTokens)}
+                  {toLocalFormat(totalSoldTokens) }
                 </span>{" "}
                 {<br />}/ <span className="text-[20px] font-Oxanium" >200,000,000</span>
               </Typography>
