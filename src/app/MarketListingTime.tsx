@@ -90,7 +90,6 @@ const PresaleSection = (props:{t:any})=>{
                               }}
                               className="font-Oxanium leading-7 font-bold text-[22px] animate-pulse	"
                             >
-                              {t('UNTIL PRICE INCREASE')}
                             </Typography>
                             <Grid width={"100%"} maxWidth="440px">
                               <TimerCountDown  t={t} />
