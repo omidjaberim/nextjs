@@ -86,7 +86,7 @@ import Image from "next/image"
             centerMode={!true} responsive={responsive} renderButtonGroupOutside={true}             
             customButtonGroup={<ButtonGroup next={()=>next} previous={()=>next} goToSlide={()=>{}}   />} >
                 {
-                  counterArr.map( (x:number) => ( <img  className="w-[300px] h-[300px] rounded-xl " src={`/${x}.png`} alt="metav" /> ) )  
+                  counterArr.map( (x:number) => ( <img className="w-[300px] h-[300px] rounded-xl " src={`/${x}.png`} alt="metav" /> ) )  
                 }
           </Carousel>
       )
