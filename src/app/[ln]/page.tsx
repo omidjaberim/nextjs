@@ -12,6 +12,7 @@ import Footer from "../Footer";
 import {  useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslation } from '../i18n/client'
+import Gallery from "../Gallery";
 
 const clamp = (value: number) => Math.max(0, value);
 
@@ -78,6 +79,7 @@ export default  function App() {
           <Testimonies t={t} />
         </div>
         <AboutSection t={t} />
+        <Gallery />
         <HeroSection t={t} />
         <Tokenomics t={t}/>
         <Roadmap t={t}/>

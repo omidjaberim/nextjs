@@ -44,6 +44,7 @@ const About = (props:{t:any})=>{
                 </div>                
               </div>          
             </div>
+            
         </section>
   );
 };
