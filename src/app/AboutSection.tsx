@@ -5,6 +5,7 @@ import { Typography } from '@mui/material';
 import Ellipse02 from "@/assets/Ellipse02.svg"
 import Ellipse01 from "@/assets/Ellipse01.svg"
 import Ellipse03 from "@/assets/Ellipse03.svg"
+import Gallery from './Gallery';
 const Title =  styled(Typography)(({})=>({  
     textAlign: "center",
     lineHeight: "44px", 
@@ -18,7 +19,8 @@ const Title =  styled(Typography)(({})=>({
 const About = (props:{t:any})=>{
   const {t} = props;
   return (
-    <section id='about' className={"w-full flex flex-col items-center bg-[#11121A] font-Oxanium pt-[62px] pb-[84px]  "}  > 
+    <div className='bg-[#11121A]  pt-[62px] pb-[84px]' >
+    <section id='about' className={"w-full flex flex-col items-center font-Oxanium   "}  > 
         <div className=' max-w-[1440px] relative' >   
           <div className=' flex lg:flex-row lg:justify-between items-center  mx-auto flex-col'>  
             <div className='flex flex-col items-center w-full py-[25px]' >
@@ -46,6 +48,8 @@ const About = (props:{t:any})=>{
             </div>
             
         </section>
+        <Gallery />
+        </div>
   );
 };
 
