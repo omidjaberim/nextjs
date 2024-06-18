@@ -75,7 +75,7 @@ import Image from "next/image"
   const CarouselWrapper = ()=>{
 
     const counterArr = [] as number[];
-    for(let x = 1 ; x <= 24 ; x++){
+    for(let x = 1 ; x <= 14 ; x++){
       counterArr.push(x)
     } 
 
