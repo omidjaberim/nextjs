@@ -106,9 +106,9 @@ function PresaleBox(props:{t:any}) {
         const val1: any = Number(formatUnits(presaleData[1]?.toString(), dec));
         totalTokeSoldContract += Number(parseFloat(val1)?.toFixed(0));
       }
-      setamountRaisedForAll(toLocalFormat(totalRaisedAmount + 2126579));
-      setTotalSoldTokens(toLocalFormat(+totalTokeSoldContract + 123499157));
-      let progForAll = ( (totalRaisedAmount + 2126579) / 3600000 ) * 100;
+      setamountRaisedForAll(toLocalFormat(totalRaisedAmount + 2364199));
+      setTotalSoldTokens(toLocalFormat(+totalTokeSoldContract + 133400013 ));
+      let progForAll = ( (totalRaisedAmount + 2364199) / 3600000 ) * 100;
       setprogressBarForAll(+progForAll);
       const preSaleStatusContract: any | boolean = await preSaleReadFunction(
         "isPresaleEnded",
