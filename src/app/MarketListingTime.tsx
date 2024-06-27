@@ -73,7 +73,7 @@ const PresaleSection = (props:{t:any})=>{
                         {t("The convergence of reality and innovation, where")}
                              <br/> {t("aspirations are converted into digital realms.")}
                         </Typography>                 
-                        <Grid className="bg-[#000000a8] rounded-2xl py-[20px] px-[4px] mt-[26px]  md:ml-4" > 
+                        {/* <Grid className="bg-[#000000a8] rounded-2xl py-[20px] px-[4px] mt-[26px]  md:ml-4" > 
                           <Stack
                             gap={{ xl: 2, md: 2}}
                             maxWidth={"100%"}
@@ -95,7 +95,7 @@ const PresaleSection = (props:{t:any})=>{
                               <TimerCountDown  t={t} />
                             </Grid>
                         </Stack>
-                        </Grid>
+                        </Grid> */}
                       <Grid className="flex justify-start my-[20px] flex-col-reverse gap-2 md:gap-0 md:flex-row " >   
                       <div className="flex" >                     
                         <div className=" flex justify-center  mx-auto md:ml-6 "  >
